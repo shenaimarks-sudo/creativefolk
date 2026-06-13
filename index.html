@@ -1,15 +1,16 @@
+
 <!DOCTYPE html>
-<html lang="en" class="no-mobile">
+<html lang="en">
 
 <head>
   <!-- Meta Tags -->
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="author" content="Laralink">
+  <meta name="author" content="Creative Folk">
   <!-- Favicon Icon -->
-  <link rel="icon" href="assets/img/favicon.png">
-  <title>Grace - Personal Portfolio Website</title>
+  <link rel="icon" href="assets/img/hero/BLACK_Logo_BG.svg">
+  <title>Creative Folk | Good folk. Great work.</title>
   <!-- Plugins Links -->
   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
   <link rel="stylesheet" href="assets/css/fontawesome.min.css">
@@ -17,6 +18,463 @@
   <link rel="stylesheet" href="assets/css/slick.css">
   <!-- Style Links -->
   <link rel="stylesheet" href="assets/css/style.css">
+  <!-- ============================================================
+       CUSTOM CREATIVE FOLK OVERRIDES
+       Keep this block after assets/css/style.css so it overrides the template.
+       Sections are ordered to match the page flow: Header, Hero, About,
+       Services, Feedback, Footer.
+  ============================================================= -->
+  <style>
+    /* ============================================================
+       01. HEADER / LOGO
+    ============================================================= */
+    .cs_main_header_left {
+      display: flex !important;
+      align-items: center !important;
+      min-width: 150px !important;
+      overflow: visible !important;
+    }
+
+    .cs_site_branding {
+      display: flex !important;
+      align-items: center !important;
+      width: 120px !important;
+      max-width: 120px !important;
+      height: auto !important;
+      overflow: visible !important;
+    }
+
+    .cs_site_branding img {
+      display: block !important;
+      width: 130px !important;
+      max-width: 130px !important;
+      height: auto !important;
+      opacity: 1 !important;
+      visibility: visible !important;
+    }
+
+    /* ============================================================
+       02. HERO SECTION, MOBILE POSITIONING
+    ============================================================= */
+    @media (max-width: 767px) {
+      .cs_site_header,
+      .cs_main_header {
+        padding-top: 0 !important;
+        margin-top: 0 !important;
+      }
+
+      .cs_main_header_in {
+        padding-top: 20px !important;
+        padding-bottom: 0 !important;
+        align-items: center !important;
+      }
+
+      .cs_site_branding img {
+        width: 95px !important;
+        max-width: 95px !important;
+      }
+
+      #hero .cs_height_150,
+      #hero .cs_height_lg_150 {
+        height: 120px !important;
+      }
+
+      #hero .cs_hero_title {
+        margin-top: 0 !important;
+      }
+
+      #hero .cs_hero_text {
+        margin-bottom: 40px !important;
+      }
+
+      #hero .cs_imagebox {
+        margin-top: -70px !important;
+        transform: none !important;
+        position: relative !important;
+      }
+
+      #hero .cs_imagebox_in > img:first-child {
+        width: 75% !important;
+        max-width: 75% !important;
+        margin-left: auto !important;
+        margin-right: 15px !important;
+        display: block !important;
+      }
+
+      #hero .cs_circle_shape {
+        display: none !important;
+      }
+
+      #hero .cs_btn.cs_style_3 {
+        position: absolute !important;
+        top: 58% !important;
+        left: 40px !important;
+        z-index: 20 !important;
+      }
+
+      #hero .cs_height_80,
+      #hero .cs_height_lg_60 {
+        height: 0 !important;
+      }
+
+      #hero {
+        margin-bottom: -50px !important;
+      }
+    }
+
+    /* ============================================================
+   03. ABOUT MOVING BANNERS, MOBILE OVERLAP
+============================================================= */
+@media (max-width: 767px) {
+  #about .position-relative {
+    min-height: 91px !important;
+    overflow: hidden !important;
+  }
+
+  #about .cs_moving_container_wrap {
+    position: absolute !important;
+    left: -90px !important;
+    right: -90px !important;
+    width: calc(100% + 180px) !important;
+    height: 60px !important;
+  }
+
+  #about .cs_moving_container_wrap:nth-child(1) {
+    top: 16px !important;
+    transform: rotate(5deg) !important;
+    z-index: 3 !important;
+  }
+
+  #about .cs_moving_container_wrap:nth-child(2) {
+    top: 18px !important;
+    transform: rotate(-5deg) !important;
+    z-index: 2 !important;
+  }
+
+  #about .cs_moving_container_wrap h3 {
+    font-size: 25px !important;
+    white-space: nowrap !important;
+  }
+
+  #about .cs_moving_content {
+    gap: 40px !important;
+  }
+}
+
+    /* ============================================================
+       04. SERVICES SECTION
+    ============================================================= */
+    .cs_services_intro {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 40px;
+    }
+
+    .cf_services_grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .cf_service_card {
+      min-height: 230px;
+      border-radius: 24px;
+      background: #68C6F1;
+      padding: 32px;
+      display: flex;
+      align-items: flex-end;
+      transition: 0.3s ease;
+    }
+
+    .cf_service_card:hover {
+      background: #FA7BD4;
+    }
+
+    .cf_service_card h5 {
+      font-size: 22px;
+      line-height: 1.15;
+      color: #1f1f1f;
+      margin: 0;
+    }
+
+    @media (max-width: 991px) {
+      .cs_services_intro {
+        display: block;
+      }
+
+      .cf_services_grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 575px) {
+      .cf_services_grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px;
+        padding-left: 14px;
+        padding-right: 14px;
+      }
+
+      .cf_service_card {
+        min-height: 120px;
+        border-radius: 18px;
+        padding: 16px;
+      }
+
+      .cf_service_card h5 {
+        font-size: 15px;
+        line-height: 1.15;
+      }
+    }
+
+    /* ============================================================
+       05. CLIENT FEEDBACK, DECORATIVE SHAPES
+    ============================================================= */
+    .cf_feedback_section {
+      overflow: hidden;
+    }
+
+    .cf_feedback_spin_right {
+      position: absolute;
+      top: 40px;
+      right: 10%;
+      width: 90px;
+      height: auto;
+      z-index: 1;
+      animation: cfSpinClockwise 10s linear infinite;
+    }
+
+    .cf_feedback_star_left {
+      position: absolute;
+      top: 60px;
+      left: -45px;
+      width: 135px;
+      height: auto;
+      z-index: 1;
+    }
+
+    #feedback .container {
+      position: relative;
+      z-index: 2;
+    }
+
+    @keyframes cfSpinClockwise {
+      from {
+        transform: rotate(0deg);
+      }
+
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    @media (max-width: 991px) {
+      .cf_feedback_spin_right {
+        width: 70px;
+        right: 5%;
+        top: 35px;
+      }
+
+      .cf_feedback_star_left {
+        width: 110px;
+        left: -35px;
+        top: 50px;
+      }
+    }
+
+    /* ============================================================
+       06. CLIENT FEEDBACK, SLIDER LAYOUT
+    ============================================================= */
+    #feedback .cs_slider {
+      position: relative;
+    }
+
+    #feedback .cs_slider_container,
+    #feedback .cs_slider_wrapper,
+    #feedback .slick-list,
+    #feedback .slick-track,
+    #feedback .slick_slide_in {
+      height: 100%;
+    }
+
+    #feedback .slick_slide_in {
+      cursor: pointer;
+    }
+
+    #feedback .cs_testimonial.cs_style_2 {
+      min-height: 520px;
+      overflow: hidden;
+      background: #68C6F1;
+      border-radius: 40px;
+      display: flex !important;
+      align-items: stretch !important;
+      justify-content: flex-start !important;
+    }
+
+    #feedback .cs_testimonial_thumbnail {
+      position: relative !important;
+      inset: auto !important;
+      left: auto !important;
+      top: auto !important;
+      transform: none !important;
+      width: 50% !important;
+      height: auto !important;
+      min-height: 520px;
+      flex: 0 0 50%;
+      border-radius: 40px 0 0 40px;
+      overflow: hidden;
+      background: #f4eeee;
+      opacity: 1 !important;
+    }
+
+    #feedback .cs_testimonial_thumbnail img {
+      width: 100% !important;
+      height: 100% !important;
+      display: block;
+      object-fit: cover;
+      opacity: 1 !important;
+    }
+
+    #feedback .cs_testimonial_in {
+      width: 50% !important;
+      flex: 0 0 50%;
+      padding: 70px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+      z-index: 2;
+      background: #68C6F1;
+    }
+
+    #feedback .cs_testimonial_text {
+      max-width: 100%;
+      margin-bottom: 30px;
+    }
+
+    #feedback .cs_pagination {
+      margin-top: 24px;
+    }
+
+    @media (max-width: 991px) {
+      #feedback .cs_slider {
+        margin-top: 40px !important;
+        padding-left: 14px !important;
+        padding-right: 14px !important;
+        box-sizing: border-box;
+      }
+
+      #feedback .cs_testimonial.cs_style_2 {
+        min-height: auto;
+        flex-direction: column;
+        border-radius: 32px;
+      }
+
+      #feedback .cs_testimonial_thumbnail,
+      #feedback .cs_testimonial_in {
+        width: 100% !important;
+        flex: 0 0 auto;
+      }
+
+      #feedback .cs_testimonial_thumbnail {
+        min-height: 0 !important;
+        height: auto !important;
+        padding: 24px 24px 0;
+        border-radius: 32px 32px 0 0;
+        background: #68C6F1;
+      }
+
+      #feedback .cs_testimonial_thumbnail img {
+        width: 100% !important;
+        height: auto !important;
+        max-height: 260px !important;
+        object-fit: contain !important;
+        object-position: center center;
+        border-radius: 28px 28px 0 0;
+      }
+
+      #feedback .cs_testimonial_in {
+        padding: 28px 24px 34px;
+      }
+
+      #feedback .cs_testimonial_text {
+        font-size: 18px !important;
+        line-height: 1.35;
+      }
+    }
+
+    /* ============================================================
+       07. CLIENT FEEDBACK, SLIDER ARROWS
+    ============================================================= */
+    #feedback .cs_slick_arrow {
+      display: flex !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      z-index: 999 !important;
+      pointer-events: none;
+      padding: 0 20px;
+    }
+
+    #feedback .cs_left_arrow,
+    #feedback .cs_right_arrow {
+      display: flex !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+      pointer-events: auto;
+      cursor: pointer;
+      z-index: 1000 !important;
+    }
+
+    @media (max-width: 991px) {
+      #feedback .cs_slick_arrow {
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+        right: auto !important;
+        bottom: auto !important;
+        transform: none !important;
+        width: 130px !important;
+        margin: 24px auto 0 !important;
+        padding: 0 !important;
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+      }
+
+      #feedback .cs_left_arrow,
+      #feedback .cs_right_arrow {
+        width: 48px !important;
+        height: 48px !important;
+        margin: 0 !important;
+        border-radius: 50%;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+      }
+
+      #feedback .cs_pagination {
+        margin-top: 16px;
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 575px) {
+      #feedback {
+        padding-bottom: 50px;
+      }
+    }
+
+    /* ============================================================
+       08. FOOTER / CONTACT
+    ============================================================= */
+    #contact a:hover {
+      color: #FA7BD4 !important;
+    }
+  </style>
 </head>
 
 <body>
@@ -33,37 +491,22 @@
       <div class="container">
         <div class="cs_main_header_in">
           <div class="cs_main_header_left">
-            <a class="cs_site_branding" href="index.html">
-              <img src="assets/img/logo.svg" alt="Logo">
+            <a class="cs_site_branding" href="#hero">
+              <img src="assets/img/hero/BLACK_Logo_BG.svg" alt="Logo">
             </a>
           </div>
-          <div class="cs_main_header_right">
+          <div class="cs_main_header_center">
             <div class="cs_nav">
               <ul class="cs_nav_list">
-                <li class="active menu-item-has-children">
-                  <a href="index.html">Home</a>
-                  <ul>
-                    <li><a href="index.html">Home - Default</a></li>
-                    <li><a href="home-v2.html">Home - V2</a></li>
-                    <li><a href="home-v3.html">Home - V3</a></li>
-                  </ul>
-                </li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="project.html">Project</a></li>
-                <li><a href="pricing.html">price</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li class="menu-item-has-children">
-                  <a href="#">Pages</a>
-                  <ul>
-                    <li><a href="blog-details.html">Blog Details</a></li>
-                    <li><a href="project-details.html">Project Details</a></li>
-                    <li><a href="service-details-v1.html">Service Details V1</a></li>
-                    <li><a href="service-details-v2.html">Service Details V2</a></li>
-                  </ul>
-                </li>
-                <li><a href="contact.html">contact</a></li>
+                <li class="active"><a href="#hero">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#feedback">Kind words</a></li>
+                <li><a href="#contact">Contact</a></li>
               </ul>
             </div>
+          </div>
+          <div class="cs_main_header_right">
+            <a href="#contact" class="cs_btn cs_style_1 cs_border_btn"><span>Work with us</span></a>
           </div>
         </div>
       </div>
@@ -72,461 +515,71 @@
   <!-- End Header Section -->
   <main>
     <!-- Start Hero Section -->
-    <section class="cs_hero cs_style_1">
+    <section id="hero" class="cs_hero cs_style_3 position-relative">
+      <div class="cs_height_150 cs_height_lg_150"></div>
       <div class="container">
-        <div class="cs_hero text-center">
-          <h1 class="cs_hero_title cs_font_90 cs_focus_color_2  cs_medium">HELLO THERE, I AM GRACE!</h1>
-          <h4 class="cs_hero_text cs_primary_color cs_font_25 cs_normal text-uppercase">a passionate graphic designer with more 8 years of experience who is always excited to work with you to creating wonderful visual designs!</h4>
-        </div>
-      </div>
-      <div class="cs_imagebox cs_style_1">
-        <div class="cs_imagebox_in">
-          <div class="cs_imagebox_bg cs_fidder_bg" data-src="assets/img/shapes/hero_bg_shape_1.svg"></div>
-          <img class="cs_imagebox_image position-relative w-100" src="assets/img/hero/h2.png" alt="hero image">
-          <a href="contact.html" class="cs_btn cs_center position-absolute">Hire<br> me!</a>
-          <img class="cs_imagebox_shape_1 cs_sprin_animation position-absolute" src="assets/img/shapes/star_shape_6.svg" alt="star shape 1">
-          <img class="cs_imagebox_shape_2 cs_sprin_animation position-absolute" src="assets/img/shapes/star_shape_4.svg" alt="star shape 2">
-        </div>
-      </div>
-      <div class="cs_hero_bottom cs_focus_bg cs_white_color w-100">
-        <div class="container">
-          <div class="cs_hero_bottom_wrap d-md-flex justify-content-lg-between align-items-center">
-            <div class="cs_funfact_wrap d-flex">
-              <div class="cs_funfact cs_style_1">
-                <div class="cs_funfact_info">
-                  <h3 class="cs_funfact_title cs_white_color cs_font_40 cs_medium">
-                    <span>
-                      <span class="odometer" data-count-to="350"></span>+
-                    </span>
-                  </h3>
-                  <p class="cs_funfact_text cs_font_18 cs_white_color">Notable <br> Projects</p>
-                </div>
+        <div class="row">
+          <div class="col-xl-5 col-lg-6">
+            <div>
+              <h1 class="cs_hero_title text-uppercase cs_font_90 cs_medium cs_focus_color_2">CREATIVE FOLK.</h1>
+              <p class="cs_hero_text cs_font_18 cs_primary_color cs_opacity_07">Hi, folks! I'm Shenai. Professional box ticker, chaos untangler, and founder of Creative Folk.</p>
+              <a class="cs_btn cs_style_3" href="#about">
+                <img src="assets/img/icons/arrow_down_f1.svg" alt="">
+                <img src="assets/img/icons/arrow_down_f1.svg" alt="">
+              </a>
+            </div>
+          </div>
+          <div class="col-xl-7 col-lg-6">
+            <div class="cs_imagebox cs_style_2 position-relative">
+              <div class="cs_imagebox_in position-relative">
+                <img src="assets/img/about/sm_1.svg" alt="hero-img">
+                <img class="cs_circle_shape" src="assets/img/shapes/half_circel.svg" alt="hero-shape">
+                <img class="cs_sprin_animation" src="assets/img/shapes/star_shape_7.svg" alt="hero-shape">
               </div>
-              <div class="cs_funfact cs_style_1">
-                <div class="cs_funfact_info">
-                  <h3 class="cs_funfact_title cs_white_color cs_font_40 cs_medium">
-                    <span>
-                      <span class="odometer" data-count-to="150"></span>+
-                    </span>
-                  </h3>
-                  <p class="cs_funfact_text cs_font_18 cs_white_color">Brands and<br> Clients</p>
-                </div>
+              <div class="cs_social cs_style_1 cs_type_1">
+                <a class="cs_center" href="https://www.facebook.com/creativefolkau" target="_blank" rel="noopener"><i class="fa-brands fa-facebook-f"></i></a>
+                <a class="cs_center" href="https://www.linkedin.com/company/creativefolkau" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a class="cs_center" href="https://www.instagram.com/creativefolkau" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i></a>
               </div>
             </div>
-            <div class="cs_funfact_wrap d-flex">
-              <div class="cs_funfact cs_style_1">
-                <div class="cs_funfact_info">
-                  <h3 class="cs_funfact_title cs_white_color cs_font_40 cs_medium">
-                    <span>
-                      <span class="odometer" data-count-to="90"></span>%
-                    </span>
-                  </h3>
-                  <p class="cs_funfact_text cs_font_18 cs_white_color">Notable <br> Projects</p>
-                </div>
-              </div>
-              <div class="cs_funfact cs_style_1">
-                <div class="cs_funfact_info">
-                  <h3 class="cs_funfact_title cs_white_color cs_font_40 cs_medium">
-                    <span>
-                      <span class="odometer" data-count-to="8"></span>+
-                    </span>
-                  </h3>
-                  <p class="cs_funfact_text cs_font_18 cs_white_color">Years of<br> Experience</p>
-                </div>
-              </div>
-            </div>
+            <div class="cs_height_lg_10"></div>
           </div>
         </div>
       </div>
+      <div class="cs_height_80 cs_height_lg_60"></div>
     </section>
     <!-- End Hero Section -->
     <!-- Start About Section -->
-    <section class="cs_focus_bg cs_white_color">
-      <div class="cs_height_140 cs_height_lg_70"></div>
-      <div class="container">
-        <div class="cs_about cs_style_1">
-          <div class="row">
-            <div class="col-xxl-4 col-xl-5">
-              <h2 class="cs_about_title cs_font_70 cs_white_color cs_normal mb-0">GET TO KNOW ME MORE</h2>
-            </div>
-            <div class="col-xxl-8 col-xl-7">
-              <p class="cs_about_text cs_font_25 cs_white_color text-uppercase cs_opacity_07 cs_line_top_1 mb-0">As
-                a passionate
-                graphic
-                designer, I
-                believe that design has the power to make a difference in the world. I strive to create designs that are
-                not
-                only aesthetically pleasing but also communicate a message and evoke emotions.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="cs_height_130 cs_height_lg_70"></div>
-    </section>
-    <!-- End About Section -->
-    <!-- Start Service Section -->
-    <section>
-      <div class="cs_height_135 cs_height_lg_60"></div>
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-4">
-            <div>
-              <div class="cs_sprin_animation d-inline-block">
-                <img src="assets/img/shapes/star_shape_3.svg" alt="">
-              </div>
-              <div class="cs_height_60"></div>
-              <p class="cs_primary_color cs_font_18 cs_opacity_07 mb-0">Designing for a world<br> of endless
-                possibilities
-              </p>
-              <div class="cs_height_lg_20"></div>
-            </div>
-          </div>
-          <div class="col-lg-8">
-            <h2 class=" cs_font_70 cs_primary_color  mb-0 cs_normal">MY SERVICES</h2>
-            <div class="cs_height_55 cs_height_lg_25"></div>
-            <a href="service-details-v1.html" class="cs_service cs_style_1 cs_parallax_mousemove_scene">
-              <h4 class="cs_service_title cs_primary_color cs_font_25 mb-0 cs_normal">Branding and Identity Design</h4>
-              <div class="cs_service_thumbnail cs_parallax_mousemove_follow">
-                <img class="h-100 w-100" src="assets/img/services/hsv_1.jpg" alt="service1">
-              </div>
-              <div class="cs_service_icon">
-                <img src="assets/img/icons/arrow.svg" alt="arrow">
-              </div>
-            </a>
-            <a href="service-details-v1.html" class="cs_service cs_style_1 cs_parallax_mousemove_scene">
-              <h4 class="cs_service_title cs_primary_color cs_font_25 mb-0 cs_normal">Web Development</h4>
-              <div class="cs_service_thumbnail cs_parallax_mousemove_follow">
-                <img class="h-100 w-100" src="assets/img/services/hsv_2.jpg" alt="service1">
-              </div>
-              <div class="cs_service_icon">
-                <img src="assets/img/icons/arrow.svg" alt="arrow">
-              </div>
-            </a>
-            <a href="service-details-v1.html" class="cs_service cs_style_1 cs_parallax_mousemove_scene">
-              <h4 class="cs_service_title cs_primary_color cs_font_25 mb-0 cs_normal">Web Design</h4>
-              <div class="cs_service_thumbnail cs_parallax_mousemove_follow">
-                <img class="h-100 w-100" src="assets/img/services/hsv_3.jpg" alt="service1">
-              </div>
-              <div class="cs_service_icon">
-                <img src="assets/img/icons/arrow.svg" alt="arrow">
-              </div>
-            </a>
-            <a href="service-details-v1.html" class="cs_service cs_style_1 cs_parallax_mousemove_scene">
-              <h4 class="cs_service_title cs_primary_color cs_font_25 mb-0 cs_normal">UI Design</h4>
-              <div class="cs_service_thumbnail cs_parallax_mousemove_follow">
-                <img class="h-100 w-100" src="assets/img/services/hsv_4.jpg" alt="service1">
-              </div>
-              <div class="cs_service_icon">
-                <img src="assets/img/icons/arrow.svg" alt="arrow">
-              </div>
-            </a>
-            <a href="service-details-v1.html" class="cs_service cs_style_1 cs_parallax_mousemove_scene">
-              <h4 class="cs_service_title cs_primary_color cs_font_25 mb-0 cs_normal">Illustration</h4>
-              <div class="cs_service_thumbnail cs_parallax_mousemove_follow">
-                <img class="h-100 w-100" src="assets/img/services/hsv_5.jpg" alt="service1">
-              </div>
-              <div class="cs_service_icon">
-                <img src="assets/img/icons/arrow.svg" alt="arrow">
-              </div>
-            </a>
-            <a href="service-details-v1.html" class="cs_service cs_style_1 cs_parallax_mousemove_scene">
-              <h4 class="cs_service_title cs_primary_color cs_font_25 mb-0 cs_normal">Motion Graphics</h4>
-              <div class="cs_service_thumbnail cs_parallax_mousemove_follow">
-                <img class="h-100 w-100" src="assets/img/services/hsv_6.jpg" alt="service1">
-              </div>
-              <div class="cs_service_icon">
-                <img src="assets/img/icons/arrow.svg" alt="arrow">
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="cs_height_150 cs_height_lg_80"></div>
-    </section>
-    <!-- End Service Section -->
-    <!-- Start Brand Section -->
-    <section class="cs_focus_bg cs_white_color">
-      <div class="cs_height_135 cs_height_lg_70"></div>
-      <div class="container">
-        <h2 class="cs_white_color cs_font_70 cs_normal mb-0">MY CLIENTS</h2>
-        <div class="cs_height_100 cs_height_lg_50"></div>
-      </div>
-      <div>
-        <div class="cs_moving_container_wrap cs_style_1">
-          <div class="cs_moving_container_in">
-            <div class="cs_moving_content cs_slide_right">
-              <div class="cs_brand cs_style_1">
-                <img src="assets/img/brands/br1.svg" alt="brand image">
-              </div>
-              <div class="cs_brand cs_style_1">
-                <img src="assets/img/brands/br2.svg" alt="brand image">
-              </div>
-              <div class="cs_brand cs_style_1">
-                <img src="assets/img/brands/br3.svg" alt="brand image">
-              </div>
-              <div class="cs_brand cs_style_1">
-                <img src="assets/img/brands/br4.svg" alt="brand image">
-              </div>
-              <div class="cs_brand cs_style_1">
-                <img src="assets/img/brands/br5.svg" alt="brand image">
-              </div>
-              <div class="cs_brand cs_style_1">
-                <img src="assets/img/brands/br6.svg" alt="brand image">
-              </div>
-              <div class="cs_brand cs_style_1">
-                <img src="assets/img/brands/br7.svg" alt="brand image">
-              </div>
-              <div class="cs_brand cs_style_1">
-                <img src="assets/img/brands/br8.svg" alt="brand image">
-              </div>
-            </div>
-            <div class="cs_moving_content cs_slide_right">
-              <div class="cs_brand cs_style_1">
-                <img src="assets/img/brands/br1.svg" alt="brand image">
-              </div>
-              <div class="cs_brand cs_style_1">
-                <img src="assets/img/brands/br2.svg" alt="brand image">
-              </div>
-              <div class="cs_brand cs_style_1">
-                <img src="assets/img/brands/br3.svg" alt="brand image">
-              </div>
-              <div class="cs_brand cs_style_1">
-                <img src="assets/img/brands/br4.svg" alt="brand image">
-              </div>
-              <div class="cs_brand cs_style_1">
-                <img src="assets/img/brands/br5.svg" alt="brand image">
-              </div>
-              <div class="cs_brand cs_style_1">
-                <img src="assets/img/brands/br6.svg" alt="brand image">
-              </div>
-              <div class="cs_brand cs_style_1">
-                <img src="assets/img/brands/br7.svg" alt="brand image">
-              </div>
-              <div class="cs_brand cs_style_1">
-                <img src="assets/img/brands/br8.svg" alt="brand image">
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="cs_height_70 cs_height_lg_0"></div>
-        <div class="cs_moving_container_wrap cs_style_1">
-          <div class="cs_moving_container_in">
-            <div class="cs_moving_content cs_slide_left">
-              <div class="cs_brand cs_style_1">
-                <img src="assets/img/brands/br5.svg" alt="brand image">
-              </div>
-              <div class="cs_brand cs_style_1">
-                <img src="assets/img/brands/br6.svg" alt="brand image">
-              </div>
-              <div class="cs_brand cs_style_1">
-                <img src="assets/img/brands/br7.svg" alt="brand image">
-              </div>
-              <div class="cs_brand cs_style_1">
-                <img src="assets/img/brands/br8.svg" alt="brand image">
-              </div>
-              <div class="cs_brand cs_style_1">
-                <img src="assets/img/brands/br1.svg" alt="brand image">
-              </div>
-              <div class="cs_brand cs_style_1">
-                <img src="assets/img/brands/br2.svg" alt="brand image">
-              </div>
-              <div class="cs_brand cs_style_1">
-                <img src="assets/img/brands/br3.svg" alt="brand image">
-              </div>
-              <div class="cs_brand cs_style_1">
-                <img src="assets/img/brands/br4.svg" alt="brand image">
-              </div>
-            </div>
-            <div class="cs_moving_content cs_slide_left">
-              <div class="cs_brand cs_style_1">
-                <img src="assets/img/brands/br1.svg" alt="brand image">
-              </div>
-              <div class="cs_brand cs_style_1">
-                <img src="assets/img/brands/br2.svg" alt="brand image">
-              </div>
-              <div class="cs_brand cs_style_1">
-                <img src="assets/img/brands/br3.svg" alt="brand image">
-              </div>
-              <div class="cs_brand cs_style_1">
-                <img src="assets/img/brands/br4.svg" alt="brand image">
-              </div>
-              <div class="cs_brand cs_style_1">
-                <img src="assets/img/brands/br5.svg" alt="brand image">
-              </div>
-              <div class="cs_brand cs_style_1">
-                <img src="assets/img/brands/br6.svg" alt="brand image">
-              </div>
-              <div class="cs_brand cs_style_1">
-                <img src="assets/img/brands/br7.svg" alt="brand image">
-              </div>
-              <div class="cs_brand cs_style_1">
-                <img src="assets/img/brands/br8.svg" alt="brand image">
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="cs_height_200 cs_height_lg_50"></div>
-    </section>
-    <!-- End Brand Section -->
-    <!-- Start Portfolio Section -->
-    <section>
-      <div class="position-relative">
-        <div class="cs_focus_bg cs_white_color cs_height_30"></div>
-        <div class="cs_moving_container_wrap cs_style_1 cs_type_1 cs_focus_bg_3 cs_rotate_2 cs_height_100">
-          <div class="cs_moving_container_in">
-            <div class="cs_moving_content cs_slide_left">
-              <div class="d-flex align-items-center">
-                <img class="cs_sprin_animation cs_sprin_animation_10" src="assets/img/shapes/star_shape_4.svg" alt="brand image">
-                <h3 class="cs_focus_color cs_font_40 cs_medium mb-0">FEATURED PROJECTS</h3>
-              </div>
-              <div class="d-flex align-items-center">
-                <img class="cs_sprin_animation cs_sprin_animation_10" src="assets/img/shapes/star_shape_4.svg" alt="brand image">
-                <h3 class="cs_focus_color cs_font_40 cs_medium mb-0">FEATURED PROJECTS</h3>
-              </div>
-              <div class="d-flex align-items-center">
-                <img class="cs_sprin_animation cs_sprin_animation_10" src="assets/img/shapes/star_shape_4.svg" alt="brand image">
-                <h3 class="cs_focus_color cs_font_40 cs_medium mb-0">FEATURED PROJECTS</h3>
-              </div>
-            </div>
-            <div class="cs_moving_content cs_slide_left">
-              <div class="d-flex align-items-center">
-                <img class="cs_sprin_animation cs_sprin_animation_10" src="assets/img/shapes/star_shape_4.svg" alt="brand image">
-                <h3 class="cs_focus_color cs_font_40 cs_medium mb-0">FEATURED PROJECTS</h3>
-              </div>
-              <div class="d-flex align-items-center">
-                <img class="cs_sprin_animation cs_sprin_animation_10" src="assets/img/shapes/star_shape_4.svg" alt="brand image">
-                <h3 class="cs_focus_color cs_font_40 cs_medium mb-0">FEATURED PROJECTS</h3>
-              </div>
-              <div class="d-flex align-items-center">
-                <img class="cs_sprin_animation cs_sprin_animation_10" src="assets/img/shapes/star_shape_4.svg" alt="brand image">
-                <h3 class="cs_focus_color cs_font_40 cs_medium mb-0">FEATURED PROJECTS</h3>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="cs_height_200 cs_height_lg_80"></div>
-        <div class="cs_height_50"></div>
-      </div>
-      <div class="container">
-        <div class="cs_project_slider_1">
-          <div class="cs_project_slider_in">
-            <div class="cs_slider cs_style_1 position-relative">
-              <div class="cs_slider_container" data-autoplay="0" data-loop="1" data-speed="800" data-center="0" data-slides-per-view="1">
-                <div class="cs_slider_wrapper">
-                  <div class="slick_slide_in">
-                    <div class="cs_portfolio cs_style_1 cs_transition_4">
-                      <a class="cs_portfolio_thumbnail d-block position-relative cs_zoom" href="project-details.html">
-                        <img class="w-100 cs_zoom_in" src="assets/img/portfolio/pt4.jpg" alt="Portfolio image">
-                        <p class="cs_portfolio_desc cs_transition_4 cs_font_18 cs_white_color cs_focus_bg cs_white_color position-absolute bottom-0 cs_normal w-100 mb-0">
-                          I create a tutorial video on how to use Sparkworks application.
-                        </p>
-                      </a>
-                      <div class="cs_portfolio_info">
-                        <h3 class="cs_portfolio_title cs_font_25 cs_primary_color text-uppercase cs_normal"><a href="project-details.html">Sparkworks Motion Graphics</a>
-                        </h3>
-                        <p class="cs_portfolio_subtitle cs_font_18 mb-0 cs_primary_color cs_opacity_07">Project 3</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="slick_slide_in">
-                    <div class="cs_portfolio cs_style_1 cs_transition_4">
-                      <a class="cs_portfolio_thumbnail d-block position-relative cs_zoom" href="project-details.html">
-                        <img class="w-100 cs_zoom_in" src="assets/img/portfolio/pt3.jpg" alt="Portfolio image">
-                        <p class="cs_portfolio_desc cs_transition_4 cs_font_18 cs_white_color cs_focus_bg cs_white_color position-absolute bottom-0 cs_normal w-100 mb-0">
-                          I create a tutorial video on how to use Sparkworks application.
-                        </p>
-                      </a>
-                      <div class="cs_portfolio_info">
-                        <h3 class="cs_portfolio_title cs_font_25 cs_primary_color text-uppercase cs_normal"><a href="project-details.html">Sparkworks Motion Graphics</a>
-                        </h3>
-                        <p class="cs_portfolio_subtitle cs_font_18 mb-0 cs_primary_color cs_opacity_07">Project 3</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="slick_slide_in">
-                    <div class="cs_portfolio cs_style_1 cs_transition_4">
-                      <a class="cs_portfolio_thumbnail d-block position-relative cs_zoom" href="project-details.html">
-                        <img class="w-100 cs_zoom_in" src="assets/img/portfolio/pt1.jpg" alt="Portfolio image">
-                        <p class="cs_portfolio_desc cs_transition_4 cs_font_18 cs_white_color cs_focus_bg cs_white_color position-absolute bottom-0 cs_normal w-100 mb-0">
-                          I create a tutorial video on how to use Sparkworks application.
-                        </p>
-                      </a>
-                      <div class="cs_portfolio_info">
-                        <h3 class="cs_portfolio_title cs_font_25 cs_primary_color text-uppercase cs_normal"><a href="project-details.html">Sparkworks Motion Graphics</a>
-                        </h3>
-                        <p class="cs_portfolio_subtitle cs_font_18 mb-0 cs_primary_color cs_opacity_07">Project 3</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="slick_slide_in">
-                    <div class="cs_portfolio cs_style_1 cs_transition_4">
-                      <a class="cs_portfolio_thumbnail d-block position-relative cs_zoom" href="project-details.html">
-                        <img class="w-100 cs_zoom_in" src="assets/img/portfolio/pt2.jpg" alt="Portfolio image">
-                        <p class="cs_portfolio_desc cs_transition_4 cs_font_18 cs_white_color cs_focus_bg cs_white_color position-absolute bottom-0 cs_normal w-100 mb-0">
-                          I create a tutorial video on how to use Sparkworks application.
-                        </p>
-                      </a>
-                      <div class="cs_portfolio_info">
-                        <h3 class="cs_portfolio_title cs_font_25 cs_primary_color cs_normal"><a href="project-details.html">Sparkworks Motion Graphics</a>
-                        </h3>
-                        <p class="cs_portfolio_subtitle cs_font_18 mb-0 cs_primary_color cs_opacity_07">Project 3</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="cs_slick_arrow cs_style_1">
-                  <div class="cs_left_arrow cs_btn cs_style_2 cs_focus_1">
-                    <svg width="28" height="26" viewBox="0 0 28 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M12.2261 25.6484H13.6457C13.6457 23.1184 12.7071 17.3731 4.87373 13.7213L27.2972 13.6924V12.2488L4.87373 12.2776C12.7071 8.62637 13.6457 2.88044 13.6457 0.351074L12.2261 0.351074C12.2261 2.91477 11.1035 9.21242 0.702637 12.3064V13.6924C11.1035 16.7864 12.2261 23.0841 12.2261 25.6484Z" fill="currentColor" />
-                    </svg>
-                  </div>
-                  <div class="cs_right_arrow cs_btn cs_style_2 cs_focus_1">
-                    <svg width="28" height="26" viewBox="0 0 28 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M15.7739 0.351629H14.3543C14.3543 2.88161 15.2929 8.62692 23.1263 12.2787L0.70277 12.3076V13.7512L23.1263 13.7224C15.2929 17.3736 14.3543 23.1196 14.3543 25.6489H15.7739C15.7739 23.0852 16.8965 16.7876 27.2974 13.6936V12.3076C16.8965 9.21359 15.7739 2.91593 15.7739 0.351629Z" fill="currentColor" />
-                    </svg>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="cs_height_200 cs_height_lg_65"></div>
-    </section>
-    <!-- End Portfolio Section -->
-    <!-- Start Values Section -->
-    <section class="cs_focus_bg cs_white_color">
+    <section id="about" class="cs_focus_bg cs_white_color">
       <div class="position-relative">
         <div class="cs_moving_container_wrap cs_style_1 cs_type_1 cs_focus_bg_2 cs_rotate_3 cs_height_100">
           <div class="cs_moving_container_in">
             <div class="cs_moving_content cs_slide_left">
               <div class="d-flex align-items-center">
                 <img class="cs_sprin_animation cs_sprin_animation_10" src="assets/img/shapes/star_shape_4.svg" alt="brand image">
-                <h3 class="cs_focus_color cs_font_40 cs_medium mb-0">FEATURED PROJECTS</h3>
+                <h3 class="cs_focus_color cs_font_40 cs_medium mb-0">GOOD FOLK. GREAT WORK.</h3>
               </div>
               <div class="d-flex align-items-center">
                 <img class="cs_sprin_animation cs_sprin_animation_10" src="assets/img/shapes/star_shape_4.svg" alt="brand image">
-                <h3 class="cs_focus_color cs_font_40 cs_medium mb-0">FEATURED PROJECTS</h3>
+                <h3 class="cs_focus_color cs_font_40 cs_medium mb-0">GOOD FOLK. GREAT WORK.</h3>
               </div>
               <div class="d-flex align-items-center">
                 <img class="cs_sprin_animation cs_sprin_animation_10" src="assets/img/shapes/star_shape_4.svg" alt="brand image">
-                <h3 class="cs_focus_color cs_font_40 cs_medium mb-0">FEATURED PROJECTS</h3>
+                <h3 class="cs_focus_color cs_font_40 cs_medium mb-0">GOOD FOLK. GREAT WORK.</h3>
               </div>
             </div>
             <div class="cs_moving_content cs_slide_left">
               <div class="d-flex align-items-center">
                 <img class="cs_sprin_animation cs_sprin_animation_10" src="assets/img/shapes/star_shape_4.svg" alt="brand image">
-                <h3 class="cs_focus_color cs_font_40 cs_medium mb-0">FEATURED PROJECTS</h3>
+                <h3 class="cs_focus_color cs_font_40 cs_medium mb-0">GOOD FOLK. GREAT WORK.</h3>
               </div>
               <div class="d-flex align-items-center">
                 <img class="cs_sprin_animation cs_sprin_animation_10" src="assets/img/shapes/star_shape_4.svg" alt="brand image">
-                <h3 class="cs_focus_color cs_font_40 cs_medium mb-0">FEATURED PROJECTS</h3>
+                <h3 class="cs_focus_color cs_font_40 cs_medium mb-0">GOOD FOLK. GREAT WORK.</h3>
               </div>
               <div class="d-flex align-items-center">
                 <img class="cs_sprin_animation cs_sprin_animation_10" src="assets/img/shapes/star_shape_4.svg" alt="brand image">
-                <h3 class="cs_focus_color cs_font_40 cs_medium mb-0">FEATURED PROJECTS</h3>
+                <h3 class="cs_focus_color cs_font_40 cs_medium mb-0">GOOD FOLK. GREAT WORK.</h3>
               </div>
             </div>
           </div>
@@ -536,393 +589,365 @@
             <div class="cs_moving_content cs_slide_left">
               <div class="d-flex align-items-center">
                 <img class="cs_sprin_animation cs_sprin_animation_10" src="assets/img/shapes/star_shape_4.svg" alt="brand image">
-                <h3 class="cs_focus_color cs_font_40 cs_medium mb-0">FEATURED PROJECTS</h3>
+                <h3 class="cs_focus_color cs_font_40 cs_medium mb-0">GOOD FOLK. GREAT WORK.</h3>
               </div>
               <div class="d-flex align-items-center">
                 <img class="cs_sprin_animation cs_sprin_animation_10" src="assets/img/shapes/star_shape_4.svg" alt="brand image">
-                <h3 class="cs_focus_color cs_font_40 cs_medium mb-0">FEATURED PROJECTS</h3>
+                <h3 class="cs_focus_color cs_font_40 cs_medium mb-0">GOOD FOLK. GREAT WORK.</h3>
               </div>
               <div class="d-flex align-items-center">
                 <img class="cs_sprin_animation cs_sprin_animation_10" src="assets/img/shapes/star_shape_4.svg" alt="brand image">
-                <h3 class="cs_focus_color cs_font_40 cs_medium mb-0">FEATURED PROJECTS</h3>
+                <h3 class="cs_focus_color cs_font_40 cs_medium mb-0">GOOD FOLK. GREAT WORK.</h3>
               </div>
             </div>
             <div class="cs_moving_content cs_slide_left">
               <div class="d-flex align-items-center">
                 <img class="cs_sprin_animation cs_sprin_animation_10" src="assets/img/shapes/star_shape_4.svg" alt="brand image">
-                <h3 class="cs_focus_color cs_font_40 cs_medium mb-0">FEATURED PROJECTS</h3>
+                <h3 class="cs_focus_color cs_font_40 cs_medium mb-0">GOOD FOLK. GREAT WORK.</h3>
               </div>
               <div class="d-flex align-items-center">
                 <img class="cs_sprin_animation cs_sprin_animation_10" src="assets/img/shapes/star_shape_4.svg" alt="brand image">
-                <h3 class="cs_focus_color cs_font_40 cs_medium mb-0">FEATURED PROJECTS</h3>
+                <h3 class="cs_focus_color cs_font_40 cs_medium mb-0">GOOD FOLK. GREAT WORK.</h3>
               </div>
               <div class="d-flex align-items-center">
                 <img class="cs_sprin_animation cs_sprin_animation_10" src="assets/img/shapes/star_shape_4.svg" alt="brand image">
-                <h3 class="cs_focus_color cs_font_40 cs_medium mb-0">FEATURED PROJECTS</h3>
+                <h3 class="cs_focus_color cs_font_40 cs_medium mb-0">GOOD FOLK. GREAT WORK.</h3>
               </div>
             </div>
           </div>
         </div>
-        <div class="cs_focus_bg cs_white_color cs_height_80"></div>
-        <div class="cs_height_200 cs_height_lg_75"></div>
+        <div class="cs_height_115 cs_height_lg_65"></div>
       </div>
-      <div class="container">
-        <h3 class="cs_section_title cs_white_color cs_font_40 cs_normal mb-0">My Values</h3>
-        <div class="cs_height_65 cs_height_lg_30"></div>
-        <div class="cs_accordians cs_style_2">
-          <div class="cs_accordian ">
-            <div class="cs_accordian_head d-flex justify-content-between align-items-center">
-              <h2 class="cs_accordian_title cs_white_color cs_font_70 cs_normal cs_normal mb-0">CREATIVITY</h2>
-              <a href="project.html" class="cs_btn cs_style_3 cs_flex_none cs_center">
-                <img src="assets/img/icons/arrow_sm_down_light.svg" alt="arrow-icon">
-                <img src="assets/img/icons/arrow_sm_down_light.svg" alt="arrow-icon">
-              </a>
-            </div>
-            <div class="cs_accordian_body">
-              <div class="d-flex justify-content-end">
-                <p class="cs_white_color text-uppercase cs_font_25 mb-0">Customized solutions to fit each client's unique needs and budget. Please contact us.</p>
+
+    </section>
+    <!-- End About Section -->
+<!-- Start Service Section -->
+<section id="services">
+  <div class="cs_height_150 cs_height_lg_70"></div>
+
+  <div class="container">
+    <div class="cs_services_intro">
+      <h2 class="cs_section_title text-uppercase cs_font_70 cs_normal mb-0">WHAT WE DO</h2>
+      <p class="cs_line_top_2 cs_font_18 cs_primary_color mb-0">
+        We help businesses that are ready to grow.<br>
+        What we're really good at is finding the gap between where your business is and where your customers are, and closing it.
+      </p>
+    </div>
+
+    <div class="cs_height_60 cs_height_lg_40"></div>
+
+    <div class="cf_services_grid">
+      <div class="cf_service_card">
+        <h5>Social Media Strategy</h5>
+      </div>
+
+      <div class="cf_service_card">
+        <h5>Content &amp; Copywriting</h5>
+      </div>
+
+      <div class="cf_service_card">
+        <h5>Operations &amp; Systems</h5>
+      </div>
+
+      <div class="cf_service_card">
+        <h5>Training &amp; Learning Design</h5>
+      </div>
+
+      <div class="cf_service_card">
+        <h5>SEO &amp; Website Updates</h5>
+      </div>
+
+      <div class="cf_service_card">
+        <h5>Leadership Coaching</h5>
+      </div>
+    </div>
+  </div>
+  <div class="cs_height_140 cs_height_lg_80"></div>
+  <p class="cs_font_18 cs_primary_color mb-0 text-center">
+    We're not a big agency. We're just really good folk who give a damn about your business.
+  </p>
+  <div class="cs_height_130 cs_height_lg_80"></div>
+</section>
+<!-- End Service Section -->
+  <!-- Start Client Feedback Section -->
+<section id="feedback" class="cf_feedback_section position-relative">
+  <img class="cf_feedback_star_left" src="assets/img/shapes/star_shape_6.svg" alt="">
+  <img class="cf_feedback_spin_right" src="assets/img/shapes/cta_shape_2_lav.svg" alt="">
+
+  <div class="cs_height_120 cs_height_lg_70"></div>
+  <div class="container">
+    <h2 class="cs_primary_color cs_font_70 cs_normal text-center mb-0">CLIENT FEEDBACK</h2>
+    <div class="cs_height_80 cs_height_lg_30"></div>
+    <div class="cs_slider cs_style_2 position-relative">
+          <div class="cs_slider_container" data-autoplay="0" data-loop="1" data-speed="1500" data-center="0" data-slides-per-view="1">
+            <div class="cs_slider_wrapper">
+              <div class="slick_slide_in">
+                <div class="cs_testimonial cs_style_2 cs_radius_40 d-flex align-items-center justify-content-xl-end position-relative">
+                  <div class="cs_testimonial_thumbnail position-absolute">
+                    <img src="assets/img/testimonials/SF_2.png" alt="">
+                  </div>
+                  <div class="cs_testimonial_in">
+                    <p class="cs_testimonial_text cs_font_20 text-uppercase cs_primary_color">“Wow wow wow! You’ve nailed the brief Shenai, well done. <br> I'm truly in awe of what you do!”</p>
+                    <div class="cs_testimonial_author cs_font_18 cs_primary_color position-relative text-uppercase">Sally F.</div>
+                  </div>
+                </div>
+              </div>
+              <div class="slick_slide_in">
+                <div class="cs_testimonial cs_style_2 cs_radius_40 d-flex align-items-center justify-content-xl-end position-relative">
+                  <div class="cs_testimonial_thumbnail position-absolute">
+                    <img src="assets/img/testimonials/AW_1.png" alt="">
+                  </div>
+                  <div class="cs_testimonial_in">
+                    <p class="cs_testimonial_text cs_font_20 text-uppercase cs_primary_color">“I can’t thank you enough for creating my SECOND BRAIN!! <br> I created 3 posts tonight.. so much easier.. I've been so swamped so it will help me so much… <br> Thank you ❤️❤️🙏❤️🙏❤️❤️🙏🙏”</p>
+                    <div class="cs_testimonial_author cs_font_18 cs_primary_color position-relative text-uppercase">Anita W.</div>
+                  </div>
+                </div>
+              </div>
+              <div class="slick_slide_in">
+                <div class="cs_testimonial cs_style_2 cs_radius_40 d-flex align-items-center justify-content-xl-end position-relative">
+                  <div class="cs_testimonial_thumbnail position-absolute">
+                    <img src="assets/img/testimonials/KA_1.png" alt="">
+                  </div>
+                  <div class="cs_testimonial_in">
+                    <p class="cs_testimonial_text cs_font_20 text-uppercase cs_primary_color">"Ohh my goodness you are good. These are amazing. <br> So good! Love it. <br> Yes for it all. <br> Thanks so much!"</p>
+                    <div class="cs_testimonial_author cs_font_18 cs_primary_color position-relative text-uppercase">Karina A.</div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-          <div class="cs_accordian">
-            <div class="cs_accordian_head d-flex justify-content-between align-items-center">
-              <h2 class="cs_accordian_title cs_white_color cs_font_70 cs_normal cs_normal mb-0">QUALITY</h2>
-              <a href="project.html" class="cs_btn cs_style_3 cs_flex_none cs_center">
-                <img src="assets/img/icons/arrow_sm_down_light.svg" alt="arrow-icon">
-                <img src="assets/img/icons/arrow_sm_down_light.svg" alt="arrow-icon">
-              </a>
+          <div class="cs_slick_arrow cs_style_2 w-100 position-absolute d-flex justify-content-between">
+            <div class="cs_left_arrow cs_btn cs_style_2 cs_focus_1">
+              <svg width="28" height="26" viewBox="0 0 28 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12.2261 25.6484H13.6457C13.6457 23.1184 12.7071 17.3731 4.87373 13.7213L27.2972 13.6924V12.2488L4.87373 12.2776C12.7071 8.62637 13.6457 2.88044 13.6457 0.351074L12.2261 0.351074C12.2261 2.91477 11.1035 9.21242 0.702637 12.3064V13.6924C11.1035 16.7864 12.2261 23.0841 12.2261 25.6484Z" fill="currentColor" />
+              </svg>
             </div>
-            <div class="cs_accordian_body">
-              <div class="d-flex justify-content-end">
-                <p class="cs_white_color text-uppercase cs_font_25 mb-0">Customized solutions to fit each client's unique needs and budget. Please contact us.</p>
-              </div>
+            <div class="cs_right_arrow cs_btn cs_style_2 cs_focus_1">
+              <svg width="28" height="26" viewBox="0 0 28 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15.7739 0.351629H14.3543C14.3543 2.88161 15.2929 8.62692 23.1263 12.2787L0.70277 12.3076V13.7512L23.1263 13.7224C15.2929 17.3736 14.3543 23.1196 14.3543 25.6489H15.7739C15.7739 23.0852 16.8965 16.7876 27.2974 13.6936V12.3076C16.8965 9.21359 15.7739 2.91593 15.7739 0.351629Z" fill="currentColor" />
+              </svg>
             </div>
           </div>
-          <div class="cs_accordian active">
-            <div class="cs_accordian_head d-flex justify-content-between align-items-center">
-              <h2 class="cs_accordian_title cs_white_color cs_font_70 cs_normal cs_normal mb-0">RESPONSILITY</h2>
-              <a href="project.html" class="cs_btn cs_style_3 cs_flex_none cs_center">
-                <img src="assets/img/icons/arrow_sm_down_light.svg" alt="arrow-icon">
-                <img src="assets/img/icons/arrow_sm_down_light.svg" alt="arrow-icon">
-              </a>
-            </div>
-            <div class="cs_accordian_body">
-              <div class="d-flex justify-content-end">
-                <p class="cs_white_color text-uppercase cs_font_25 mb-0">Customized solutions to fit each client's unique needs and budget. Please contact us.</p>
-              </div>
-            </div>
-          </div>
+          <div class="cs_pagination cs_style_1 cs_mobile_show"></div>
         </div>
       </div>
       <div class="cs_height_150 cs_height_lg_80"></div>
     </section>
-    <!-- End Values Section -->
-    <!-- Start Client Feetback Section -->
-    <section>
-      <div class="cs_height_150 cs_height_lg_60"></div>
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-5">
-            <div>
-              <div class="cs_sprin_animation d-inline-block">
-                <img src="assets/img/shapes/star_shape_2.svg" alt="Thumb">
+    <!-- End Client Feedback Section -->
+<!-- Start Brand Section -->
+<section class="cs_brand_wrap cs_focus_bg cs_white_color">
+  <div class="container">
+    <div class="row">
+      <div class="col-xxl-5 col-lg-6">
+        <div class="cs_height_80 cs_height_lg_70"></div>
+        <h2 class="cs_white_color cs_font_70 cs_normal mb-0">OUR CLIENTS</h2>
+        <div class="cs_height_lg_50"></div>
+      </div>
+
+      <div class="col-xxl-5 col-lg-6 offset-xxl-2 d-flex">
+        <div class="cs_moving_container_wrap cs_style_1 cs_type_2">
+          <div class="cs_moving_container_in">
+            <div class="cs_moving_content cs_slide_up">
+              <div class="cs_brand cs_style_1 cs_type_1">
+                <img src="assets/img/brands/he_1.svg" alt="Household Electrical logo">
               </div>
-              <div class="cs_height_100"></div>
-              <h2 class="cs_section_title cs_primary_color cs_font_70 mb-0 cs_opacity_05 cs_normal justify-self-end">CLIENT FEEDBACK</h2>
+              <div class="cs_brand cs_style_1 cs_type_1">
+                <img src="assets/img/brands/sf_logo_1.svg" alt="Sally Freeman logo">
+              </div>
+              <div class="cs_brand cs_style_1 cs_type_1">
+                <img src="assets/img/brands/BICO_1.svg" alt="Beauti Industri Co logo">
+              </div>
+              <div class="cs_brand cs_style_1 cs_type_1">
+                <img src="assets/img/brands/vis_2.svg" alt="Visual Strategies logo">
+              </div>
+              <div class="cs_brand cs_style_1 cs_type_1">
+                <img src="assets/img/brands/ibw_1.svg" alt="Incline B&amp;W logo">
+              </div>
+              <div class="cs_brand cs_style_1 cs_type_1">
+                <img src="assets/img/brands/pcto_1.svg" alt="PC Training Online logo">
+              </div>
+            </div>
+
+            <div class="cs_moving_content cs_slide_up">
+              <div class="cs_brand cs_style_1 cs_type_1">
+                <img src="assets/img/brands/he_1.svg" alt="Household Electrical logo">
+              </div>
+              <div class="cs_brand cs_style_1 cs_type_1">
+                <img src="assets/img/brands/sf_logo_1.svg" alt="Sally Freeman logo">
+              </div>
+              <div class="cs_brand cs_style_1 cs_type_1">
+                <img src="assets/img/brands/BICO_1.svg" alt="Beauti Industri Co logo">
+              </div>
+               <div class="cs_brand cs_style_1 cs_type_1">
+                <img src="assets/img/brands/ibw_1.svg" alt="Incline B&amp;W logo">
+              </div>
+              <div class="cs_brand cs_style_1 cs_type_1">
+                <img src="assets/img/brands/pcto_1.svg" alt="PC Training Online logo">
+              </div>
+              <div class="cs_brand cs_style_1 cs_type_1">
+                <img src="assets/img/brands/vis_2.svg" alt="Visual Strategies logo">
+              </div>
             </div>
           </div>
-          <div class="col-lg-7">
-            <div class="cs_slider cs_style_1">
-              <div class="cs_slider_container" data-autoplay="0" data-loop="1" data-speed="800" data-center="0" data-slides-per-view="1">
-                <div class="cs_slider_wrapper">
-                  <div class="slick_slide_in">
-                    <div class="cs_testimonial cs_style_1">
-                      <p class="cs_testimonial_text cs_font_40 cs_primary_color cs_medium">“Working with Grace was a pleasure. She understood our vision and it into a design that exceeded our expectations.”</p>
-                      <div class="cs_testimonial_author cs_font_25 cs_primary_color position-relative text-uppercase">
-                        OMBE
-                      </div>
-                    </div>
-                  </div>
-                  <div class="slick_slide_in">
-                    <div class="cs_testimonial cs_style_1">
-                      <p class="cs_testimonial_text cs_font_40 cs_primary_color cs_medium">“Design that exceeded our
-                        expectations.”
-                      </p>
-                      <div class="cs_testimonial_author cs_font_25 cs_primary_color position-relative text-uppercase">
-                        OMBE
-                      </div>
-                    </div>
-                  </div>
-                  <div class="slick_slide_in">
-                    <div class="cs_testimonial cs_style_1">
-                      <p class="cs_testimonial_text cs_font_40 cs_primary_color cs_medium">“She
-                        understood our vision and it into a design that exceeded our expectations.”
-                      </p>
-                      <div class="cs_testimonial_author cs_font_25 cs_primary_color position-relative text-uppercase">
-                        OMBE
-                      </div>
-                    </div>
-                  </div>
-                </div>
+        </div>
+
+        <div class="cs_moving_container_wrap cs_style_1 cs_type_2">
+          <div class="cs_moving_container_in">
+            <div class="cs_moving_content cs_slide_down">
+              <div class="cs_brand cs_style_1 cs_type_1">
+                <img src="assets/img/brands/ibw_1.svg" alt="Incline B&amp;W logo">
               </div>
-              <div class="cs_slick_arrow cs_style_3">
-                <div class="cs_left_arrow cs_btn cs_style_2 cs_focus_1">
-                  <svg width="28" height="26" viewBox="0 0 28 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12.2261 25.6484H13.6457C13.6457 23.1184 12.7071 17.3731 4.87373 13.7213L27.2972 13.6924V12.2488L4.87373 12.2776C12.7071 8.62637 13.6457 2.88044 13.6457 0.351074L12.2261 0.351074C12.2261 2.91477 11.1035 9.21242 0.702637 12.3064V13.6924C11.1035 16.7864 12.2261 23.0841 12.2261 25.6484Z" fill="currentColor" />
-                  </svg>
-                </div>
-                <div class="cs_right_arrow cs_btn cs_style_2 cs_focus_1">
-                  <svg width="28" height="26" viewBox="0 0 28 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M15.7739 0.351629H14.3543C14.3543 2.88161 15.2929 8.62692 23.1263 12.2787L0.70277 12.3076V13.7512L23.1263 13.7224C15.2929 17.3736 14.3543 23.1196 14.3543 25.6489H15.7739C15.7739 23.0852 16.8965 16.7876 27.2974 13.6936V12.3076C16.8965 9.21359 15.7739 2.91593 15.7739 0.351629Z" fill="currentColor" />
-                  </svg>
-                </div>
+              <div class="cs_brand cs_style_1 cs_type_1">
+                <img src="assets/img/brands/sf_logo_1.svg" alt="Sally Freeman logo">
+              </div>
+              <div class="cs_brand cs_style_1 cs_type_1">
+                <img src="assets/img/brands/BICO_1.svg" alt="Beauti Industri Co logo">
+              </div>
+              <div class="cs_brand cs_style_1 cs_type_1">
+                <img src="assets/img/brands/vis_2.svg" alt="Visual Strategies logo">
+              </div>
+              <div class="cs_brand cs_style_1 cs_type_1">
+                <img src="assets/img/brands/pcto_1.svg" alt="PC Training Online logo">
+              </div>
+              <div class="cs_brand cs_style_1 cs_type_1">
+                <img src="assets/img/brands/he_1.svg" alt="Household Electrical logo">
+              </div>
+            </div>
+
+            <div class="cs_moving_content cs_slide_down">
+              <div class="cs_brand cs_style_1 cs_type_1">
+                <img src="assets/img/brands/sf_logo_1.svg" alt="Sally Freeman logo">
+              </div>
+              <div class="cs_brand cs_style_1 cs_type_1">
+                <img src="assets/img/brands/BICO_1.svg" alt="Beauti Industri Co logo">
+              </div>
+              <div class="cs_brand cs_style_1 cs_type_1">
+                <img src="assets/img/brands/vis_2.svg" alt="Visual Strategies logo">
+              </div>
+              <div class="cs_brand cs_style_1 cs_type_1">
+                <img src="assets/img/brands/ibw_1.svg" alt="Incline B&amp;W logo">
+              </div>
+              <div class="cs_brand cs_style_1 cs_type_1">
+                <img src="assets/img/brands/pcto_1.svg" alt="PC Training Online logo">
+              </div>
+              <div class="cs_brand cs_style_1 cs_type_1">
+                <img src="assets/img/brands/he_1.svg" alt="Household Electrical logo">
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
-    <!-- End Client Feetback Section -->
+
+    </div>
+  </div>
+</section>
+<!-- End Brand Section -->
     <!-- Start Cta Section -->
     <section>
-      <div class="cs_height_150 cs_height_lg_80"></div>
       <div class="container">
-        <div class="cs_cta cs_style_1 text-center cs_focus_bg cs_white_color cs_radius_40">
-          <div class="cs_height_100 cs_height_lg_80"></div>
+        <div class="cs_cta cs_style_1 text-center">
+          <div class="cs_height_130 cs_height_lg_70"></div>
           <div class="cs_cta_info">
-            <h2 class="cs_cta_title cs_normal text-uppercase cs_white_color cs_font_70">HAvE A PROJECT IN MIND?</h2>
-            <h3 class="cs_cta_subtitle cs_medium cs_white_color cs_font_40">Let’s have a discussion!</h3>
-            <a class="cs_btn cs_style_1 cs_focus_2" href="contact.html"><span>Contact Me!</span></a>
+            <h2 class="cs_cta_title cs_normal text-uppercase cs_primary_color cs_font_70">GOT SOMETHING IN MIND?</h2>
+            <h3 class="cs_cta_subtitle cs_medium cs_primary_color cs_font_25">Let’s have a chat!</h3>
+            <a class="cs_btn cs_style_1 cs_focus_2" href="mailto:hello@creativefolk.com.au?subject=Website%20enquiry"><span>Get in touch</span></a>
           </div>
-          <div class="cs_height_115 cs_height_lg_90"></div>
+          <div class="cs_height_150 cs_height_lg_80"></div>
         </div>
       </div>
-      <div class="cs_height_140 cs_height_lg_70"></div>
     </section>
     <!-- End Cta Section -->
-    <!-- Start Blog Section -->
-    <section>
-      <div class="container">
-        <div class="row">
-          <div class="col-xl-3">
-            <h3 class="cs_line_bottom_1 cs_font_40 cs_primary_color cs_medium text-uppercase mb-0">READ MY LATEST BLOGS</h3>
-          </div>
-          <div class="col-xl-9">
-            <div class="d-flex justify-content-md-end ">
-              <a class="cs_text_btn_1 cs_primary_color cs_font_16 cs_primary_color_hover" href="blog.html"><span class="cs_text_btn_text">View all blogs</span></a>
-            </div>
-            <div class="cs_height_50 cs_height_lg_50"></div>
-            <div class="row">
-              <div class="col-lg-4">
-                <div class="cs_blog cs_style_1 position-relative cs_transition_4">
-                  <div class="cs_blog_in cs_zoom position-relative">
-                    <div class="cs_blog_thumbnail">
-                      <img class="cs_zoom_in w-100" src="assets/img/blogs/b1.jpg" alt="blog thumbnail">
-                    </div>
-                    <div class="cs_blog_info cs_transition_4 position-absolute">
-                      <div class="cs_blog_date cs_white_color cs_font_16 cs_opacity_06">August 1, 2023</div>
-                      <h5 class="cs_blog_title cs_white_color cs_font_18 cs_normal"><a class="cs_focus_color_2_hover" href="blog-details.html" title="Click and show blog-details">The Art of Designing a Memorable Brand Identity</a>
-                      </h5>
-                      <p class="cs_blog_text cs_font_16 cs_white_color mb-0">Colors are important for designing.  They can make the design itself being alive or dead, and it’s gonna affect the message that want.
-                      </p>
-                    </div>
-                  </div>
-                  <a class="cs_btn cs_style_3 cs_focus_bg_2 position-absolute" href="blog-details.html">
-                    <img src="assets/img/icons/arrow-blog-light.svg" alt="arrow-icon">
-                    <img src="assets/img/icons/arrow-blog-dark.svg" alt="arrow-icon">
-                  </a>
-                </div>
-              </div>
-              <div class="col-lg-4">
-                <div class="cs_blog cs_style_1 position-relative cs_transition_4">
-                  <div class="cs_blog_in cs_zoom position-relative">
-                    <div class="cs_blog_thumbnail">
-                      <img class="cs_zoom_in w-100" src="assets/img/blogs/b2.jpg" alt="blog thumbnail">
-                    </div>
-                    <div class="cs_blog_info cs_transition_4 position-absolute">
-                      <div class="cs_blog_date cs_white_color cs_font_16 cs_opacity_06">August 1, 2023</div>
-                      <h5 class="cs_blog_title cs_white_color cs_font_18 cs_normal"><a class="cs_focus_color_2_hover" href="blog-details.html" title="Click and show blog-details">The Power of Color in Graphic Design</a>
-                      </h5>
-                      <p class="cs_blog_text cs_font_16 cs_white_color mb-0">Colors are important for designing.  They can make the design itself being alive or dead, and it’s gonna affect the message that want.
-                      </p>
-                    </div>
-                  </div>
-                  <a class="cs_btn cs_style_3 cs_focus_bg_2 position-absolute" href="blog-details.html">
-                    <img src="assets/img/icons/arrow-blog-light.svg" alt="arrow-icon">
-                    <img src="assets/img/icons/arrow-blog-dark.svg" alt="arrow-icon">
-                  </a>
-                </div>
-              </div>
-              <div class="col-lg-4">
-                <div class="cs_blog cs_style_1 position-relative cs_transition_4">
-                  <div class="cs_blog_in cs_zoom position-relative">
-                    <div class="cs_blog_thumbnail">
-                      <img class="cs_zoom_in w-100" src="assets/img/blogs/b3.jpg" alt="blog thumbnail">
-                    </div>
-                    <div class="cs_blog_info cs_transition_4 position-absolute">
-                      <div class="cs_blog_date cs_white_color cs_font_16 cs_opacity_06">August 1, 2023</div>
-                      <h5 class="cs_blog_title cs_white_color cs_font_18 cs_normal"><a class="cs_focus_color_2_hover" href="blog-details.html" title="Click and show blog-details">How to Choose the Right Palette</a>
-                      </h5>
-                      <p class="cs_blog_text cs_font_16 cs_white_color mb-0">Colors are important for designing.  They can make the design itself being alive or dead, and it’s gonna affect the message that want.
-                      </p>
-                    </div>
-                  </div>
-                  <a class="cs_btn cs_style_3 cs_focus_bg_2 position-absolute" href="blog-details.html">
-                    <img src="assets/img/icons/arrow-blog-light.svg" alt="arrow-icon">
-                    <img src="assets/img/icons/arrow-blog-dark.svg" alt="arrow-icon">
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="cs_height_120 cs_height_lg_50"></div>
-    </section>
-    <!-- End Blog Section -->
-    <!-- Start Faq Section -->
-    <section class="cs_focus_bg cs_white_color">
-      <div class="cs_height_130 cs_height_lg_70"></div>
-      <div class="container d-flex justify-content-between align-items-center">
-        <div class="cs_sprin_animation">
-          <img src="assets/img/shapes/star_shape_1.svg" alt="star-shape">
-        </div>
-        <h3 class="cs_section_title cs_white_color cs_font_70 cs_normal mb-0">MY FAQ</h3>
-      </div>
-      <div class="cs_height_65 cs_height_lg_30"></div>
-      <div class="cs_accordians cs_style_1">
-        <div class="cs_accordian">
-          <div class="container">
-            <div class="cs_accordian_head">
-              <h4 class="cs_accordian_title cs_font_25 cs_white_color cs_normal mb-0">What types of clients do you workwith?</h4>
-              <span class="cs_accordian_toggle"></span>
-            </div>
-            <div class="cs_accordian_body">
-              <p class="mb-0 cs_white_color cs_font_18">Our price varies depending on the specific services you require and the scope of your project. We offer customized solutions to fit each client's unique needs and budget. Please contact us.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="cs_accordian active">
-          <div class="container">
-            <div class="cs_accordian_head">
-              <h4 class="cs_accordian_title cs_font_25 cs_white_color cs_normal mb-0">What is your design style?
-              </h4>
-              <span class="cs_accordian_toggle"></span>
-            </div>
-            <div class="cs_accordian_body">
-              <p class="mb-0 cs_white_color cs_font_18">Our price varies depending on the specific services you require and the scope of your project. We offer customized solutions to fit each client's unique needs and budget. Please contact us.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="cs_accordian">
-          <div class="container">
-            <div class="cs_accordian_head">
-              <h4 class="cs_accordian_title cs_font_25 cs_white_color cs_normal mb-0">What is your experience in graphic design?</h4>
-              <span class="cs_accordian_toggle"></span>
-            </div>
-            <div class="cs_accordian_body">
-              <p class="mb-0 cs_white_color cs_font_18">Our price varies depending on the specific services you require and the scope of your project. We offer customized solutions to fit each client's unique needs and budget. Please contact us.</p>
-            </div>
-          </div>
-        </div>
-        <div class="cs_accordian">
-          <div class="container">
-            <div class="cs_accordian_head">
-              <h4 class="cs_accordian_title cs_font_25 cs_white_color cs_normal mb-0">How do I get started on a project with you?</h4>
-              <span class="cs_accordian_toggle"></span>
-            </div>
-            <div class="cs_accordian_body">
-              <p class="mb-0 cs_white_color cs_font_18">Our price varies depending on the specific services you require and the scope of your project. We offer customized solutions to fit each client's unique needs and budget. Please contact us.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- End Faq Section -->
   </main>
-  <!-- Start Footer Section -->
-  <footer class="cs_footer cs_style_1 cs_type_1 cs_focus_bg cs_white_color">
-    <div class="cs_height_100 cs_height_lg_80"></div>
-    <div class="container">
-      <div class="row">
-        <div class="col-xxl-3 col-lg-3">
-          <div class="cs_widget_wrap">
-            <div class="cs_site_branding">
-              <img src="assets/img/logo_light.svg" alt="footer logo">
-            </div>
-          </div>
+<!-- Start Footer Section -->
+<footer id="contact" class="cs_footer cs_style_1 cs_focus_bg cs_white_color">
+  <div class="cs_height_85 cs_height_lg_65"></div>
+  <div class="container">
+    <div class="row">
+      
+      <div class="col-xl-4 col-md-4">
+        <div class="cs_widget_wrap">
+          <h4 class="cs_widget_title cs_white_color cs_font_25 text-uppercase cs_normal">LOCATION</h4>
+          <p class="cs_fooer_text cs_font_18 cs_opacity_07 mb-0">
+            Chiang Mai, Thailand<br>
+            Serving folks across the globe
+          </p>
         </div>
-        <div class="col-lg-9">
-          <div class="row">
-            <div class="col-xxl-3 col-xl-4 col-lg-6">
-              <div class="cs_widget_wrap">
-                <h4 class="cs_widget_title cs_white_color text-uppercase cs_normal">quick link</h4>
-                <ul class="cs_footer_links cs_mp_0">
-                  <li>
-                    <a class="cs_font_18 cs_text_btn_2" href="#"><span class="cs_text_btn_text">About Me</span></a>
-                  </li>
-                  <li>
-                    <a class="cs_font_18 cs_text_btn_2" href="#"><span class="cs_text_btn_text">Services</span></a>
-                  </li>
-                  <li>
-                    <a class="cs_font_18 cs_text_btn_2" href="#"><span class="cs_text_btn_text">Projects</span></a>
-                  </li>
-                  <li>
-                    <a class="cs_font_18 cs_text_btn_2" href="#"><span class="cs_text_btn_text">Plans</span></a>
-                  </li>
-                  <li>
-                    <a class="cs_font_18 cs_text_btn_2" href="#"><span class="cs_text_btn_text">Blogs</span></a>
-                  </li>
-                  <li>
-                    <a class="cs_font_18 cs_text_btn_2" href="#"><span class="cs_text_btn_text">FAQ</span></a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-xxl-3 col-xl-4 col-lg-6">
-              <div class="cs_widget_wrap">
-                <h4 class="cs_widget_title cs_white_color cs_font_25 text-uppercase cs_normal">LOCATION</h4>
-                <p class="cs_fooer_text cs_font_18 cs_opacity_07 mb-0">Sudirman Street, Kemang,<br> Pasar Minggu, Jakarta Selatan, Indonesia</p>
-              </div>
-            </div>
-            <div class="col-xxl-3 col-xl-4 col-lg-6">
-              <div class="cs_widget_wrap">
-                <h4 class="cs_widget_title cs_white_color cs_font_25 text-uppercase cs_normal">contacts</h4>
-                <ul class="cs_text_list cs_mp_0 cs_opacity_07 mb-0">
-                  <li class="cs_font_18">Gricella Idris</li>
-                  <li class="cs_font_18">hellograce@gmailcom</li>
-                  <li class="cs_font_18">+6289 08817211</li>
-                  <li class="cs_font_18">@graceporfolio</li>
-                  <li class="cs_font_18">www.graceortfolio.com</li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-xxl-3 col-xl-4 col-lg-6">
-              <div class="cs_widget_wrap">
-                <h4 class="cs_widget_title cs_white_color cs_font_25 text-uppercase cs_normal">FOllow</h4>
-                <div class="cs_social cs_style_1">
-                  <a class="cs_center cs_font_18" href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                  <a class="cs_center cs_font_18" href="#"><i class="fa-brands fa-twitter"></i></a>
-                  <a class="cs_center cs_font_18" href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-                  <a class="cs_center cs_font_18" href="#"><i class="fa-brands fa-instagram"></i></a>
-                </div>
-              </div>
-            </div>
+      </div>
+
+      <div class="col-xl-4 col-md-4">
+        <div class="cs_widget_wrap">
+          <h4 class="cs_widget_title cs_white_color cs_font_25 text-uppercase cs_normal">CONTACT US</h4>
+          <ul class="cs_text_list cs_mp_0 cs_opacity_07 mb-0">
+            <li class="cs_font_18">
+              <a href="mailto:hello@creativefolk.com.au?subject=Website%20enquiry">hello@creativefolk.com.au</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-xl-4 col-md-4">
+        <div class="cs_widget_wrap">
+          <h4 class="cs_widget_title cs_white_color cs_font_25 text-uppercase cs_normal">FOLLOW</h4>
+          <div class="cs_social cs_style_1">
+            <a class="cs_center cs_font_18" href="https://www.facebook.com/creativefolkau" target="_blank" rel="noopener"><i class="fa-brands fa-facebook-f"></i></a>
+            <a class="cs_center cs_font_18" href="https://www.linkedin.com/company/creativefolkau" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a class="cs_center cs_font_18" href="https://www.instagram.com/creativefolkau" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i></a>
           </div>
         </div>
       </div>
     </div>
-    <div class="cs_height_60 cs_height_lg_50"></div>
-  </footer>
-  <!-- End Footer Section -->
-  
+  </div>
+  <div class="cs_height_60 cs_height_lg_50"></div>
+</footer>
+<!-- End Footer Section -->
   <!-- Scripts -->
-  <script src="assets/js/plugins/jquery-3.6.0.min.js"></script>
-  <script src="assets/js/plugins/slick.min.js"></script>
-  <script src="assets/js/plugins/odometer.min.js"></script>
-  <script src="assets/js/plugins/isotope.pkg.min.js"></script>
-  <script src="assets/js/main.js"></script>
+<script src="assets/js/plugins/jquery-3.6.0.min.js"></script>
+<script src="assets/js/plugins/slick.min.js"></script>
+<script src="assets/js/plugins/odometer.min.js"></script>
+<script src="assets/js/plugins/isotope.pkg.min.js"></script>
+<script src="assets/js/main.js"></script>
+<!-- Creative Folk testimonial slider fix JS -->
+
+<script>
+  window.addEventListener('load', function () {
+    if (window.jQuery) {
+      var $ = window.jQuery;
+
+      $('.cs_preloader').fadeOut(300);
+
+      $('#feedback .cs_slider_wrapper').each(function () {
+        var $wrapper = $(this);
+        var $slider = $wrapper.closest('.cs_slider');
+
+        if ($.fn.slick && !$wrapper.hasClass('slick-initialized')) {
+          $wrapper.slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            infinite: true,
+            speed: 600,
+            autoplay: false,
+            arrows: true,
+            dots: true,
+            adaptiveHeight: false,
+            prevArrow: $slider.find('.cs_left_arrow'),
+            nextArrow: $slider.find('.cs_right_arrow'),
+            appendDots: $slider.find('.cs_pagination')
+          });
+        }
+
+        $wrapper.on('click', '.slick_slide_in, .cs_testimonial', function (event) {
+          if ($(event.target).closest('a, .cs_left_arrow, .cs_right_arrow').length) return;
+          if ($.fn.slick && $wrapper.hasClass('slick-initialized')) {
+            $wrapper.slick('slickNext');
+          }
+        });
+      });
+    } else {
+      var preloader = document.querySelector('.cs_preloader');
+      if (preloader) preloader.style.display = 'none';
+    }
+  });
+</script>
+
 </body>
 </html>
