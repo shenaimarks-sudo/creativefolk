@@ -284,131 +284,151 @@
     }
 
     /* ============================================================
-       06. CLIENT FEEDBACK, SLIDER LAYOUT
-    ============================================================= */
-    #feedback .cs_slider {
-      position: relative;
-    }
-
-    #feedback .cs_slider_container,
-    #feedback .cs_slider_wrapper,
-    #feedback .slick-list,
-    #feedback .slick-track,
-    #feedback .slick_slide_in {
-      height: 100%;
-    }
-
-    #feedback .slick_slide_in {
-      cursor: pointer;
-    }
-
-    #feedback .cs_testimonial.cs_style_2 {
-      min-height: 520px;
-      overflow: hidden;
-      background: #68C6F1;
-      border-radius: 40px;
-      display: flex !important;
-      align-items: stretch !important;
-      justify-content: flex-start !important;
-    }
-
-    #feedback .cs_testimonial_thumbnail {
-      position: relative !important;
-      inset: auto !important;
-      left: auto !important;
-      top: auto !important;
-      transform: none !important;
-      width: 50% !important;
-      height: auto !important;
-      min-height: 520px;
-      flex: 0 0 50%;
-      border-radius: 40px 0 0 40px;
-      overflow: hidden;
-      background: #f4eeee;
-      opacity: 1 !important;
-    }
-
-    #feedback .cs_testimonial_thumbnail img {
-      width: 100% !important;
-      height: 100% !important;
-      display: block;
-      object-fit: cover;
-      opacity: 1 !important;
-    }
-
-    #feedback .cs_testimonial_in {
-      width: 50% !important;
-      flex: 0 0 50%;
-      padding: 70px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      position: relative;
-      z-index: 2;
-      background: #68C6F1;
-    }
-
-    #feedback .cs_testimonial_text {
-      max-width: 100%;
-      margin-bottom: 30px;
-    }
-
-    #feedback .cs_pagination {
-      margin-top: 24px;
-    }
-
-    @media (max-width: 991px) {
-      #feedback .container {
-  padding-left: 14px !important;
-  padding-right: 14px !important;
-}
-
+   06. CLIENT FEEDBACK, SLIDER LAYOUT
+============================================================= */
 #feedback .cs_slider {
-  margin-top: 40px !important;
-  padding-left: 0 !important;
-  padding-right: 0 !important;
-  box-sizing: border-box;
+  position: relative;
 }
-      #feedback .cs_testimonial.cs_style_2 {
-        min-height: auto;
-        flex-direction: column;
-        border-radius: 32px;
-      }
 
-      #feedback .cs_testimonial_thumbnail,
-      #feedback .cs_testimonial_in {
-        width: 100% !important;
-        flex: 0 0 auto;
-      }
+#feedback .cs_slider_container,
+#feedback .cs_slider_wrapper,
+#feedback .slick-list,
+#feedback .slick-track,
+#feedback .slick-slide,
+#feedback .slick-slide > div,
+#feedback .slick_slide_in {
+  height: auto !important;
+}
 
-      #feedback .cs_testimonial_thumbnail {
-        min-height: 0 !important;
-        height: auto !important;
-        padding: 24px 24px 0;
-        border-radius: 32px 32px 0 0;
-        background: #68C6F1;
-      }
+#feedback .slick-list {
+  transition: height 0.3s ease;
+}
 
-      #feedback .cs_testimonial_thumbnail img {
-        width: 100% !important;
-        height: auto !important;
-        max-height: 260px !important;
-        object-fit: contain !important;
-        object-position: center center;
-        border-radius: 28px 28px 0 0;
-      }
+#feedback .slick-track {
+  display: flex !important;
+  align-items: flex-start !important;
+}
 
-      #feedback .cs_testimonial_in {
-        padding: 28px 24px 34px;
-      }
+#feedback .slick-slide {
+  float: none !important;
+}
 
-      #feedback .cs_testimonial_text {
-        font-size: 18px !important;
-        line-height: 1.35;
-      }
-    }
+#feedback .slick-slide:not(.slick-active) {
+  height: 0 !important;
+  overflow: hidden !important;
+}
 
-    /* ============================================================
+#feedback .slick_slide_in {
+  cursor: pointer;
+}
+
+#feedback .cs_testimonial.cs_style_2 {
+  min-height: 520px;
+  overflow: hidden;
+  background: #68C6F1;
+  border-radius: 40px;
+  display: flex !important;
+  align-items: stretch !important;
+  justify-content: flex-start !important;
+}
+
+#feedback .cs_testimonial_thumbnail {
+  position: relative !important;
+  inset: auto !important;
+  left: auto !important;
+  top: auto !important;
+  transform: none !important;
+  width: 50% !important;
+  height: auto !important;
+  min-height: 520px;
+  flex: 0 0 50%;
+  border-radius: 40px 0 0 40px;
+  overflow: hidden;
+  background: #f4eeee;
+  opacity: 1 !important;
+}
+
+#feedback .cs_testimonial_thumbnail img {
+  width: 100% !important;
+  height: 100% !important;
+  display: block;
+  object-fit: cover;
+  opacity: 1 !important;
+}
+
+#feedback .cs_testimonial_in {
+  width: 50% !important;
+  flex: 0 0 50%;
+  padding: 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+  background: #68C6F1;
+}
+
+#feedback .cs_testimonial_text {
+  max-width: 100%;
+  margin-bottom: 30px;
+}
+
+#feedback .cs_pagination {
+  margin-top: 24px;
+}
+
+@media (max-width: 991px) {
+  #feedback .container {
+    padding-left: 14px !important;
+    padding-right: 14px !important;
+  }
+
+  #feedback .cs_slider {
+    margin-top: 40px !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    box-sizing: border-box;
+  }
+
+  #feedback .cs_testimonial.cs_style_2 {
+    min-height: auto !important;
+    flex-direction: column;
+    border-radius: 32px;
+  }
+
+  #feedback .cs_testimonial_thumbnail,
+  #feedback .cs_testimonial_in {
+    width: 100% !important;
+    flex: 0 0 auto;
+  }
+
+  #feedback .cs_testimonial_thumbnail {
+    min-height: 0 !important;
+    height: auto !important;
+    padding: 24px 24px 0;
+    border-radius: 32px 32px 0 0;
+    background: #68C6F1;
+  }
+
+  #feedback .cs_testimonial_thumbnail img {
+    width: 100% !important;
+    height: auto !important;
+    max-height: 260px !important;
+    object-fit: contain !important;
+    object-position: center center;
+    border-radius: 28px 28px 0 0;
+  }
+
+  #feedback .cs_testimonial_in {
+    padding: 28px 24px 34px;
+  }
+
+  #feedback .cs_testimonial_text {
+    font-size: 18px !important;
+    line-height: 1.35;
+  }
+}
+/* ============================================================
    07. CLIENT FEEDBACK, SLIDER ARROWS
 ============================================================= */
 #feedback .cs_slick_arrow {
@@ -431,6 +451,10 @@
   pointer-events: auto;
   cursor: pointer;
   z-index: 1000 !important;
+}
+
+#feedback .cs_pagination {
+  display: none !important;
 }
 
 @media (max-width: 991px) {
@@ -468,12 +492,8 @@
     pointer-events: auto;
     cursor: pointer;
   }
-
-  @media (max-width: 991px) {
-  #feedback .cs_pagination {
-    display: none !important;
-  }
 }
+
 @media (max-width: 575px) {
   #feedback {
     padding-bottom: 50px;
@@ -767,8 +787,7 @@
       <div class="cs_pagination cs_style_1 cs_mobile_show"></div>
     </div>
   </div>
-
-  <div class="cs_height_150 cs_height_lg_80"></div>
+<div class="cs_height_60 cs_height_lg_40"></div>
 </section>
 <!-- End Client Feedback Section -->
 <!-- Start Brand Section -->
@@ -803,6 +822,9 @@
               <div class="cs_brand cs_style_1 cs_type_1">
                 <img src="assets/img/brands/pcto_1.svg" alt="PC Training Online logo">
               </div>
+              <div class="cs_brand cs_style_1 cs_type_1">
+                <img src="assets/img/brands/the skin boutique.svg" alt="The Skin Boutique logo">
+              </div>
             </div>
 
             <div class="cs_moving_content cs_slide_up">
@@ -820,6 +842,9 @@
               </div>
               <div class="cs_brand cs_style_1 cs_type_1">
                 <img src="assets/img/brands/pcto_1.svg" alt="PC Training Online logo">
+              </div>
+              <div class="cs_brand cs_style_1 cs_type_1">
+                <img src="assets/img/brands/the skin boutique.svg" alt="The Skin Boutique logo">
               </div>
               <div class="cs_brand cs_style_1 cs_type_1">
                 <img src="assets/img/brands/vis_2.svg" alt="Visual Strategies logo">
@@ -847,6 +872,9 @@
                 <img src="assets/img/brands/pcto_1.svg" alt="PC Training Online logo">
               </div>
               <div class="cs_brand cs_style_1 cs_type_1">
+                <img src="assets/img/brands/the skin boutique.svg" alt="The Skin Boutique logo">
+              </div>
+              <div class="cs_brand cs_style_1 cs_type_1">
                 <img src="assets/img/brands/he_1.svg" alt="Household Electrical logo">
               </div>
             </div>
@@ -854,6 +882,9 @@
             <div class="cs_moving_content cs_slide_down">
               <div class="cs_brand cs_style_1 cs_type_1">
                 <img src="assets/img/brands/sf_logo_1.svg" alt="Sally Freeman logo">
+              </div>
+              <div class="cs_brand cs_style_1 cs_type_1">
+                <img src="assets/img/brands/the skin boutique.svg" alt="The Skin Boutique logo">
               </div>
               <div class="cs_brand cs_style_1 cs_type_1">
                 <img src="assets/img/brands/BICO_1.svg" alt="Beauti Industri Co logo">
@@ -887,7 +918,8 @@
           <div class="cs_cta_info">
             <h2 class="cs_cta_title cs_normal text-uppercase cs_primary_color cs_font_70">GOT SOMETHING IN MIND?</h2>
             <h3 class="cs_cta_subtitle cs_medium cs_primary_color cs_font_25">Let’s have a chat!</h3>
-            <a class="cs_btn cs_style_1 cs_focus_2" href="mailto:hello@creativefolk.com.au?subject=Website%20enquiry"><span>Get in touch</span></a>
+<div style="height: 20px;"></div>
+<a class="cs_btn cs_style_1 cs_focus_2" href="mailto:hello@creativefolk.com.au?subject=Website%20enquiry"><span>Get in touch</span></a>
           </div>
           <div class="cs_height_150 cs_height_lg_80"></div>
         </div>
@@ -965,7 +997,7 @@
             autoplay: false,
             arrows: true,
             dots: true,
-            adaptiveHeight: false,
+            adaptiveHeight: true,
             prevArrow: $slider.find('.cs_left_arrow'),
             nextArrow: $slider.find('.cs_right_arrow'),
             appendDots: $slider.find('.cs_pagination')
