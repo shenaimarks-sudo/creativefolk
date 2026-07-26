@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Page information -->
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Creative Folk">
+  <meta name="description" content="Compare Creative Folk's Foundations, Growth and Full Service monthly content and social media packages.">
+
+  <link rel="icon" href="assets/img/hero/BLACK_Logo_BG.svg">
+  <title>Monthly Services | Creative Folk</title>
+
+  <!-- Shared website styles -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <style>
+    /* ============================================================
+       HERO
+    ============================================================= */
+    .cf_monthly_hero {
+      width: 100%;
+      max-width: 1400px;
+    }
+
+    .cf_monthly_hero p {
+      max-width: 780px;
+      margin-bottom: 0;
+    }
+
+    .cf_monthly_label {
+      display: inline-flex;
+      align-items: center;
+      min-height: 42px;
+      padding: 8px 18px;
+      margin-bottom: 24px !important;
+      border: 2px solid #5533d8;
+      border-radius: 50px;
+      color: #5533d8;
+      font-size: 16px;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      line-height: 1;
+      text-transform: uppercase;
+    }
+
+    .cf_monthly_title {
+      margin: 0;
+      color: #5533d8 !important;
+      font-size: clamp(58px, 7vw, 104px);
+      line-height: 0.95;
+    }
+
+    .cf_monthly_subheading {
+      max-width: none !important;
+      margin-top: 18px;
+      color: #5533d8;
+      font-size: clamp(28px, 3vw, 42px);
+      font-weight: 500;
+      line-height: 1.1;
+      text-transform: uppercase;
+    }
+
+    .cf_monthly_intro {
+      width: 100%;
+      max-width: 1200px !important;
+      margin-top: 44px;
+      font-size: 19px !important;
+    }
+
+    .cf_package_nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 36px;
+    }
+
+    .cf_package_nav .cs_btn {
+      min-width: 190px;
+      justify-content: center;
+    }
+
+    /* ============================================================
+       MONTHLY PACKAGE SECTIONS
+    ============================================================= */
+    .cf_monthly_package {
+      color: #1f1f1f;
+      scroll-margin-top: 100px;
+    }
+
+    .cf_foundations {
+      background: #fa7bd4;
+    }
+
+    .cf_growth {
+      background: #68c6f1;
+    }
+
+    .cf_full_service {
+      background: #bf99ff;
+    }
+
+    .cf_package_layout {
+      display: grid;
+      grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+      gap: 70px;
+      align-items: start;
+    }
+
+    .cf_package_number {
+      margin-bottom: 14px;
+      color: rgba(31, 31, 31, 0.65);
+      font-size: 17px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+    }
+
+    .cf_package_title {
+      margin-bottom: 24px;
+      max-width: 100%;
+      font-size: clamp(42px, 3.4vw, 58px);
+      line-height: 1;
+      text-transform: uppercase;
+    }
+
+    .cf_package_price {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 210px;
+      min-height: 72px;
+      padding: 12px 28px;
+      margin-bottom: 28px;
+      border-radius: 50%;
+      background: #ffffff;
+      font-size: 28px;
+      font-weight: 700;
+    }
+
+    .cf_package_intro {
+      max-width: 520px;
+      margin-bottom: 30px;
+      font-size: 19px;
+      line-height: 1.55;
+    }
+
+    .cf_package_details {
+      padding: 40px;
+      border: 1px solid rgba(31, 31, 31, 0.12);
+      border-radius: 28px;
+      background: #ffffff;
+    }
+
+    .cf_package_details h3 {
+      margin: 0 0 20px;
+      color: #5533d8;
+      font-size: 22px;
+      text-transform: none;
+    }
+
+    .cf_package_details ul {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+
+    .cf_package_details li {
+      position: relative;
+      padding: 14px 0 14px 24px;
+      border-bottom: 1px solid rgba(31, 31, 31, 0.12);
+      font-size: 18px;
+      line-height: 1.5;
+    }
+
+    .cf_package_details li:first-child {
+      padding-top: 0;
+    }
+
+    .cf_package_details li:last-child {
+      padding-bottom: 0;
+      border-bottom: 0;
+    }
+
+    .cf_package_details li::before {
+      position: absolute;
+      top: 23px;
+      left: 0;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #fa7bd4;
+      content: "";
+    }
+
+    .cf_package_details li:first-child::before {
+      top: 9px;
+    }
+
+    .cf_package_action {
+      margin-top: 30px;
+    }
+
+    .cf_package_action.cs_btn {
+      width: 340px;
+      max-width: 100%;
+      height: 70px;
+      min-height: 70px;
+      padding: 0 24px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      box-sizing: border-box;
+      font-size: 17px;
+      line-height: 1.2;
+      overflow: hidden;
+      text-align: center;
+      text-shadow: none;
+      white-space: nowrap;
+    }
+
+    .cf_package_action.cs_btn span {
+      position: relative;
+      display: block;
+      width: 100%;
+      line-height: 1.2;
+      text-align: center;
+    }
+
+    .cf_package_action.cs_btn span::after {
+      position: absolute;
+      top: 50px;
+      left: 0;
+      width: 100%;
+      content: attr(data-text);
+      text-align: center;
+    }
+
+    .cf_package_action.cs_btn:hover span {
+      -webkit-transform: translateY(-50px);
+      transform: translateY(-50px);
+    }
+
+    /* ============================================================
+       CLIENT REQUIREMENTS
+    ============================================================= */
+    .cf_requirements {
+      width: 100%;
+      max-width: none;
+      margin: 0;
+      text-align: left;
+    }
+
+    .cf_requirements h2 {
+      width: 100%;
+      max-width: none;
+    }
+
+    .cf_requirements p {
+      width: 100%;
+      max-width: 1200px;
+      margin-right: 0;
+      margin-left: 0;
+      font-size: 19px !important;
+    }
+
+    /* ============================================================
+       FINAL CTA
+    ============================================================= */
+    .cf_monthly_cta {
+      background: #68c6f1;
+    }
+
+    .zcal-inline-widget {
+      width: 100%;
+      max-width: 100%;
+      overflow: hidden;
+    }
+
+    /* ============================================================
+       RESPONSIVE LAYOUT
+    ============================================================= */
+    @media (max-width: 991px) {
+      .cf_package_layout {
+        grid-template-columns: 1fr;
+        gap: 44px;
+      }
+
+      .cf_package_nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .cf_package_nav .cs_btn {
+        width: 100%;
+        max-width: 300px;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .cs_site_branding img {
+        width: 95px !important;
+        max-width: 95px !important;
+      }
+    }
+
+    @media (max-width: 575px) {
+      .cf_monthly_label {
+        min-height: 38px;
+        margin-bottom: 20px !important;
+        font-size: 14px;
+      }
+
+      .cf_monthly_title {
+        font-size: 48px;
+      }
+
+      .cf_monthly_subheading {
+        margin-top: 14px;
+        font-size: 26px;
+      }
+
+      .cf_monthly_intro {
+        margin-top: 34px;
+      }
+
+      .cf_package_title {
+        font-size: 44px;
+      }
+
+      .cf_package_details {
+        padding: 26px;
+        border-radius: 22px;
+      }
+
+      .cf_package_price {
+        min-width: 185px;
+        min-height: 64px;
+        font-size: 24px;
+      }
+
+      .cf_package_action.cs_btn {
+        width: 100%;
+        padding-right: 18px;
+        padding-left: 18px;
+        font-size: 15px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Site header -->
+  <header class="cs_site_header cs_style_1 cs_sticky_header">
+    <div class="cs_main_header">
+      <div class="container">
+        <div class="cs_main_header_in">
+          <div class="cs_main_header_left">
+            <a class="cs_site_branding" href="index.html#hero" aria-label="Creative Folk home">
+              <img src="assets/img/hero/BLACK_Logo_BG.svg" alt="Creative Folk">
+            </a>
+          </div>
+
+          <div class="cs_main_header_center">
+            <nav class="cs_nav" aria-label="Main navigation">
+              <ul class="cs_nav_list">
+                <li><a href="index.html#hero">Home</a></li>
+                <li class="menu-item-has-children active">
+                  <a href="services.html">Services</a>
+                  <ul>
+                    <li><a href="business-support.html">Business Support</a></li>
+                    <li><a href="social-media-services.html">Social Media</a></li>
+                  </ul>
+                </li>
+                <li><a href="strategy-session.html">Strategy Session</a></li>
+                <li><a href="about-us.html">About the Folks</a></li>
+              </ul>
+            </nav>
+          </div>
+
+          <div class="cs_main_header_right">
+            <a class="cs_btn cs_style_1 cs_border_btn" href="contact.html">
+              <span>Work with us</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="cs_hero cs_style_5 position-relative">
+      <div class="cs_height_170 cs_height_lg_150"></div>
+
+      <div class="container">
+        <div class="cf_monthly_hero">
+          <p class="cf_monthly_label">Monthly Services</p>
+
+          <h1 class="cf_monthly_title text-uppercase cs_focus_color_2 cs_medium">
+            Ongoing Support
+          </h1>
+
+          <p class="cf_monthly_subheading">At the Level You Need</p>
+
+          <p class="cf_monthly_intro cs_font_18 cs_primary_color cs_opacity_07">
+            Content and social media handled every month, without it taking over your week. Choose the package that matches how much content, community support and strategic oversight your business needs.
+          </p>
+
+          <div class="cf_package_nav">
+            <a class="cs_btn cs_style_1 cs_border_btn" href="#foundations">
+              <span>Foundations</span>
+            </a>
+            <a class="cs_btn cs_style_1 cs_border_btn" href="#growth">
+              <span>Growth</span>
+            </a>
+            <a class="cs_btn cs_style_1 cs_border_btn" href="#full-service">
+              <span>Full Service</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="cs_height_130 cs_height_lg_80"></div>
+    </section>
+
+    <!-- Foundations -->
+    <section id="foundations" class="cf_monthly_package cf_foundations">
+      <div class="cs_height_130 cs_height_lg_70"></div>
+
+      <div class="container">
+        <div class="cf_package_layout">
+          <div>
+            <p class="cf_package_number">01</p>
+            <h2 class="cf_package_title">Foundations</h2>
+            <div class="cf_package_price">$750</div>
+
+            <p class="cf_package_intro">
+              For businesses that need to be social media-ready and post consistently.
+            </p>
+
+            <a class="cs_btn cs_style_1 cs_focus_1 cf_package_action" href="mailto:hello@creativefolk.com.au?subject=Foundations%20Enquiry">
+              <span data-text="Enquire about Foundations">Enquire about Foundations</span>
+            </a>
+          </div>
+
+          <div class="cf_package_details">
+            <h3>What's included each month</h3>
+            <ul>
+              <li>Top-line content strategy aligned with your primary social media goal</li>
+              <li>8 posts across Facebook and Instagram</li>
+              <li>A mix of static posts, carousels and up to 2 Reels using stock or supplied footage</li>
+              <li>Caption writing and hashtag selection</li>
+              <li>Monthly content calendar provided for approval</li>
+              <li>Scheduling and publishing</li>
+              <li>Basic comment and DM monitoring</li>
+              <li>Monthly performance snapshot covering key results</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="cs_height_130 cs_height_lg_70"></div>
+    </section>
+
+    <!-- Growth -->
+    <section id="growth" class="cf_monthly_package cf_growth">
+      <div class="cs_height_130 cs_height_lg_70"></div>
+
+      <div class="container">
+        <div class="cf_package_layout">
+          <div>
+            <p class="cf_package_number">02</p>
+            <h2 class="cf_package_title">Growth</h2>
+            <div class="cf_package_price">$1,250</div>
+
+            <p class="cf_package_intro">
+              For businesses ready for a more complete, hands-off approach across more than one platform.
+            </p>
+
+            <a class="cs_btn cs_style_1 cs_focus_1 cf_package_action" href="mailto:hello@creativefolk.com.au?subject=Growth%20Enquiry">
+              <span data-text="Enquire about Growth">Enquire about Growth</span>
+            </a>
+          </div>
+
+          <div class="cf_package_details">
+            <h3>What's included each month</h3>
+            <ul>
+              <li>Detailed social media strategy with defined content pillars</li>
+              <li>12 posts across Facebook and Instagram</li>
+              <li>A mix of static posts, carousels and up to 4 Reels using stock or supplied footage</li>
+              <li>3 Stories per week</li>
+              <li>Caption writing and hashtag selection</li>
+              <li>Short video scripts or talking points where required</li>
+              <li>Monthly content calendar provided for approval</li>
+              <li>Scheduling and publishing</li>
+              <li>15 minutes of proactive community engagement per week, including comments, DMs and relevant accounts</li>
+              <li>Monthly performance report with KPIs and recommendations</li>
+              <li>Quarterly strategy call</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="cs_height_130 cs_height_lg_70"></div>
+    </section>
+
+    <!-- Full Service -->
+    <section id="full-service" class="cf_monthly_package cf_full_service">
+      <div class="cs_height_130 cs_height_lg_70"></div>
+
+      <div class="container">
+        <div class="cf_package_layout">
+          <div>
+            <p class="cf_package_number">03</p>
+            <h2 class="cf_package_title">Full Service</h2>
+            <div class="cf_package_price">$2,150</div>
+
+            <p class="cf_package_intro">
+              For businesses that want the whole thing handled with strategic oversight built in.
+            </p>
+
+            <a class="cs_btn cs_style_1 cs_focus_1 cf_package_action" href="mailto:hello@creativefolk.com.au?subject=Full%20Service%20Enquiry">
+              <span data-text="Enquire about Full Service">Enquire about Full Service</span>
+            </a>
+          </div>
+
+          <div class="cf_package_details">
+            <h3>What's included each month</h3>
+            <ul>
+              <li>Detailed social media strategy with defined content pillars and ongoing updates</li>
+              <li>16 posts across Facebook and Instagram</li>
+              <li>Content adapted for up to 2 additional platforms, including LinkedIn, Google Business Profile, Threads or TikTok</li>
+              <li>A mix of static posts, carousels and up to 6 Reels using stock or supplied footage</li>
+              <li>4 Stories per week</li>
+              <li>Caption writing and hashtag selection</li>
+              <li>Full video scripts where required</li>
+              <li>One blog article</li>
+              <li>One email marketing campaign</li>
+              <li>Monthly content calendar provided for approval</li>
+              <li>Scheduling and publishing</li>
+              <li>30 minutes of proactive community engagement per week, including comments, DMs and relevant accounts</li>
+              <li>Full monthly performance report with KPIs, recommendations and strategy updates</li>
+              <li>Monthly or quarterly strategy call</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="cs_height_130 cs_height_lg_70"></div>
+    </section>
+
+    <!-- Client requirements -->
+    <section>
+      <div class="cs_height_130 cs_height_lg_70"></div>
+
+      <div class="container">
+        <div class="cf_requirements">
+          <h2 class="cs_font_70 cs_normal cs_primary_color text-uppercase">
+            WHAT WE'LL NEED FROM YOU
+          </h2>
+
+          <div class="cs_height_35 cs_height_lg_25"></div>
+
+          <p class="cs_font_18 cs_primary_color cs_opacity_07">
+            Good social media management requires real, current content from your business. You'll need a usable collection of photos or video footage, or be willing to create and supply these assets as we work together.
+          </p>
+
+          <p class="cs_font_18 cs_primary_color cs_opacity_07">
+            We can provide ideas, prompts and scripts, but you or your team will need to capture new content regularly. Stock imagery can fill occasional gaps, but it cannot replace original content from your business.
+          </p>
+
+          <p class="cs_font_18 cs_primary_color cs_opacity_07 mb-0">
+            If you don't currently have suitable assets, we may recommend arranging professional photography or videography before your service begins.
+          </p>
+        </div>
+      </div>
+
+      <div class="cs_height_130 cs_height_lg_70"></div>
+    </section>
+
+    <!-- Final booking call to action -->
+    <section class="cf_monthly_cta">
+      <div class="container">
+        <div class="cs_cta cs_style_1 text-center cf_booking_cta">
+          <div class="cs_height_130 cs_height_lg_70"></div>
+
+          <h2 class="cs_cta_title cs_normal text-uppercase cs_primary_color cs_font_70">
+            NOT SURE WHICH LEVEL FITS?
+          </h2>
+
+          <div class="cs_height_30 cs_height_lg_20"></div>
+
+          <p class="cs_cta_subtitle cs_medium cs_primary_color cs_font_25">
+            Start with a strategy session and we'll work out what your business needs.
+          </p>
+
+          <div class="cs_height_30 cs_height_lg_20"></div>
+
+          <script type="text/javascript" async src="https://static.zcal.co/embed/v1/embed.js"></script>
+          <div class="zcal-inline-widget">
+            <a href="https://zcal.co/i/ZJHwr_RS">Strategy Session - Schedule a meeting</a>
+          </div>
+
+          <div class="cs_height_130 cs_height_lg_70"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer id="contact" class="cs_footer cs_style_1 cs_focus_bg cs_white_color">
+    <div class="cs_height_85 cs_height_lg_65"></div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-4 col-md-4">
+          <div class="cs_widget_wrap">
+            <h2 class="cs_widget_title cs_white_color cs_font_25 text-uppercase cs_normal">Location</h2>
+            <p class="cs_fooer_text cs_font_18 cs_opacity_07 mb-0">
+              Chiang Mai, Thailand<br>
+              Serving folks across the globe
+            </p>
+          </div>
+        </div>
+
+        <div class="col-xl-4 col-md-4">
+          <div class="cs_widget_wrap">
+            <h2 class="cs_widget_title cs_white_color cs_font_25 text-uppercase cs_normal">Contact us</h2>
+            <ul class="cs_text_list cs_mp_0 cs_opacity_07 mb-0">
+              <li class="cs_font_18">
+                <a href="mailto:hello@creativefolk.com.au?subject=Website%20enquiry">hello@creativefolk.com.au</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-xl-4 col-md-4">
+          <div class="cs_widget_wrap">
+            <h2 class="cs_widget_title cs_white_color cs_font_25 text-uppercase cs_normal">Follow</h2>
+            <div class="cs_social cs_style_1">
+              <a class="cs_center cs_font_18" href="https://www.facebook.com/creativefolkau" target="_blank" rel="noopener noreferrer" aria-label="Creative Folk on Facebook">
+                <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+              </a>
+              <a class="cs_center cs_font_18" href="https://www.linkedin.com/company/creativefolkau" target="_blank" rel="noopener noreferrer" aria-label="Creative Folk on LinkedIn">
+                <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+              </a>
+              <a class="cs_center cs_font_18" href="https://www.instagram.com/creativefolkau" target="_blank" rel="noopener noreferrer" aria-label="Creative Folk on Instagram">
+                <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cs_height_60 cs_height_lg_50"></div>
+  </footer>
+
+  <!-- Shared website scripts -->
+  <script src="assets/js/plugins/jquery-3.6.0.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

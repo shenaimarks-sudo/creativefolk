@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Page information -->
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Creative Folk">
+  <meta name="description" content="Choose between The Reset and The Rebuild, two focused one-off content projects from Creative Folk.">
+
+  <link rel="icon" href="assets/img/hero/BLACK_Logo_BG.svg">
+  <title>One-off Projects | Creative Folk</title>
+
+  <!-- Shared website styles -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <style>
+    /* ============================================================
+       HERO
+    ============================================================= */
+    .cf_project_hero {
+      width: 100%;
+      max-width: 1400px;
+    }
+
+    .cf_project_hero p {
+      margin-bottom: 0;
+    }
+
+    .cf_project_hero > p.cs_font_18 {
+      width: 100%;
+      max-width: 1200px;
+      font-size: 19px !important;
+    }
+
+    .cf_project_label {
+      display: inline-flex;
+      align-items: center;
+      min-height: 42px;
+      padding: 8px 18px;
+      margin-bottom: 24px !important;
+      border: 2px solid #5533d8;
+      border-radius: 50px;
+      color: #5533d8;
+      font-size: 16px;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      line-height: 1;
+      text-transform: uppercase;
+    }
+
+    .cf_project_hero_title {
+      margin: 0;
+      color: #5533d8;
+      font-size: clamp(52px, 5vw, 78px);
+      line-height: 0.95;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .cf_project_hero_subheading {
+      max-width: none !important;
+      margin-top: 18px;
+      color: #5533d8;
+      font-size: clamp(28px, 3vw, 42px);
+      font-weight: 500;
+      line-height: 1.1;
+      text-transform: uppercase;
+    }
+
+    .cf_project_hero_intro {
+      margin-top: 44px;
+    }
+
+    .cf_project_nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 36px;
+    }
+
+    /* ============================================================
+       PROJECT SECTIONS
+    ============================================================= */
+    .cf_project_section {
+      scroll-margin-top: 100px;
+    }
+
+    .cf_project_layout {
+      display: grid;
+      grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+      gap: 70px;
+      align-items: start;
+    }
+
+    .cf_project_number {
+      color: #fa7bd4;
+      font-size: 17px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      margin-bottom: 14px;
+    }
+
+    .cf_project_title {
+      max-width: 100%;
+      color: #ffffff;
+      font-size: clamp(42px, 4.2vw, 64px);
+      line-height: 1;
+      margin-bottom: 24px;
+      text-transform: uppercase;
+    }
+
+    .cf_project_price {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 190px;
+      min-height: 64px;
+      padding: 12px 28px;
+      margin-bottom: 28px;
+      border-radius: 50px;
+      background: #ffffff;
+      color: #1f1f1f;
+      font-size: 24px;
+      font-weight: 700;
+    }
+
+    .cf_project_intro {
+      width: 100%;
+      max-width: 680px;
+      font-size: 19px;
+      line-height: 1.55;
+      margin-bottom: 30px;
+    }
+
+    .cf_project_details {
+      padding: 40px;
+      border-radius: 28px;
+      background: #ffffff;
+      color: #1f1f1f;
+    }
+
+    .cf_project_details h3 {
+      margin: 0 0 18px;
+      color: #fa7bd4;
+      font-size: 22px;
+      text-transform: none;
+    }
+
+    .cf_project_details h3:not(:first-child) {
+      margin-top: 34px;
+    }
+
+    .cf_project_details ul {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+
+    .cf_project_details li {
+      position: relative;
+      padding-left: 22px;
+      margin-bottom: 12px;
+      font-size: 18px;
+      line-height: 1.5;
+    }
+
+    .cf_project_details li::before {
+      position: absolute;
+      top: 9px;
+      left: 0;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #68c6f1;
+      content: "";
+    }
+
+    .cf_project_meta {
+      padding-top: 28px;
+      margin-top: 30px;
+      border-top: 1px solid rgba(31, 31, 31, 0.16);
+      color: rgba(31, 31, 31, 0.7);
+      font-size: 17px;
+      line-height: 1.6;
+    }
+
+    .cf_project_action {
+      margin-top: 30px;
+    }
+
+    .cf_rebuild_section {
+      position: relative;
+      background: #5533d8;
+      color: #ffffff;
+    }
+
+    .cf_rebuild_section::before {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: min(240px, 40vw);
+      height: 2px;
+      background: rgba(255, 255, 255, 0.75);
+      content: "";
+      transform: translateX(-50%);
+    }
+
+    .cf_rebuild_section .cf_project_number {
+      color: #68c6f1;
+    }
+
+    /* ============================================================
+       FINAL BOOKING CTA
+    ============================================================= */
+    .zcal-inline-widget {
+      width: 100%;
+      max-width: 100%;
+      overflow: hidden;
+    }
+
+    /* ============================================================
+       RESPONSIVE LAYOUT
+    ============================================================= */
+    @media (max-width: 991px) {
+      .cf_project_hero_title {
+        white-space: normal;
+      }
+
+      .cf_project_layout {
+        grid-template-columns: 1fr;
+        gap: 44px;
+      }
+
+      .cf_project_nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .cf_project_nav .cs_btn {
+        width: 100%;
+        max-width: 300px;
+        justify-content: center;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .cs_site_branding img {
+        width: 95px !important;
+        max-width: 95px !important;
+      }
+    }
+
+    @media (max-width: 575px) {
+      .cf_project_label {
+        min-height: 38px;
+        margin-bottom: 20px !important;
+        font-size: 14px;
+      }
+
+      .cf_project_hero_title {
+        font-size: 44px;
+      }
+
+      .cf_project_hero_subheading {
+        margin-top: 14px;
+        font-size: 26px;
+      }
+
+      .cf_project_hero_intro {
+        margin-top: 34px;
+      }
+
+      .cf_project_title {
+        font-size: 42px;
+      }
+
+      .cf_project_details {
+        padding: 26px;
+        border-radius: 22px;
+      }
+
+      .cf_project_price {
+        min-height: 56px;
+        font-size: 21px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Site header -->
+  <header class="cs_site_header cs_style_1 cs_sticky_header">
+    <div class="cs_main_header">
+      <div class="container">
+        <div class="cs_main_header_in">
+          <div class="cs_main_header_left">
+            <a class="cs_site_branding" href="index.html#hero" aria-label="Creative Folk home">
+              <img src="assets/img/hero/BLACK_Logo_BG.svg" alt="Creative Folk">
+            </a>
+          </div>
+
+          <div class="cs_main_header_center">
+            <nav class="cs_nav" aria-label="Main navigation">
+              <ul class="cs_nav_list">
+                <li><a href="index.html#hero">Home</a></li>
+                <li class="menu-item-has-children active">
+                  <a href="services.html">Services</a>
+                  <ul>
+                    <li><a href="business-support.html">Business Support</a></li>
+                    <li><a href="social-media-services.html">Social Media</a></li>
+                  </ul>
+                </li>
+                <li><a href="strategy-session.html">Strategy Session</a></li>
+                <li><a href="about-us.html">About the Folks</a></li>
+              </ul>
+            </nav>
+          </div>
+
+          <div class="cs_main_header_right">
+            <a class="cs_btn cs_style_1 cs_border_btn" href="contact.html">
+              <span>Work with us</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="cs_hero cs_style_5 position-relative">
+      <div class="cs_height_170 cs_height_lg_150"></div>
+
+      <div class="container">
+        <div class="cf_project_hero">
+          <p class="cf_project_label">One-off Projects</p>
+
+          <h1 class="cf_project_hero_title cs_medium">
+            The Reset or the Rebuild?
+          </h1>
+
+          <p class="cf_project_hero_subheading">Choose the Level That Fits</p>
+
+          <p class="cf_project_hero_intro cs_font_18 cs_primary_color cs_opacity_07">
+            Two focused ways to fix what is not working, without committing to an ongoing monthly service. Choose the level that matches how clear you are on the problem and how much support you need.
+          </p>
+
+          <div class="cf_project_nav">
+            <a class="cs_btn cs_style_1 cs_border_btn" href="#the-reset">
+              <span>Explore The Reset</span>
+            </a>
+            <a class="cs_btn cs_style_1 cs_border_btn" href="#the-rebuild">
+              <span>Explore The Rebuild</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="cs_height_130 cs_height_lg_80"></div>
+    </section>
+
+    <!-- The Reset -->
+    <section id="the-reset" class="cf_project_section cs_focus_bg cs_white_color">
+      <div class="cs_height_130 cs_height_lg_70"></div>
+
+      <div class="container">
+        <div class="cf_project_layout">
+          <div>
+            <p class="cf_project_number">01</p>
+            <h2 class="cf_project_title">The Reset</h2>
+            <div class="cf_project_price">$675 AUD</div>
+
+            <p class="cf_project_intro">
+              For the business owner who knows something is off but cannot quite name what. We review what is already out there, explain what needs attention and create six pieces of content based on the new direction.
+            </p>
+
+            <a class="cs_btn cs_style_1 cs_focus_2 cf_project_action" href="mailto:hello@creativefolk.com.au?subject=The%20Reset%20Enquiry">
+              <span>Book The Reset</span>
+            </a>
+          </div>
+
+          <div class="cf_project_details">
+            <h3>What we do</h3>
+            <ul>
+              <li>Audit your current social media presence and key website pages</li>
+              <li>Provide a written diagnosis explaining what is working, what needs attention and why</li>
+              <li>Create 6 pieces of content with captions based on the findings</li>
+              <li>Include up to 2 Reels using your supplied footage</li>
+              <li>Include one consolidated round of revisions</li>
+            </ul>
+
+            <h3>What we need from you</h3>
+            <ul>
+              <li>Complete one short form, which takes approximately 5 to 10 minutes. You can send a voice note or video instead of typing your responses.</li>
+              <li>Provide any existing brand assets, images or video footage you would like us to use</li>
+            </ul>
+
+            <div class="cf_project_meta">
+              <strong>Turnaround:</strong> 5 business days<br>
+              <strong>Optional add-on:</strong> 30-minute diagnosis call, $150 AUD
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cs_height_130 cs_height_lg_70"></div>
+    </section>
+
+    <!-- The Rebuild -->
+    <section id="the-rebuild" class="cf_project_section cf_rebuild_section">
+      <div class="cs_height_130 cs_height_lg_70"></div>
+
+      <div class="container">
+        <div class="cf_project_layout">
+          <div>
+            <p class="cf_project_number">02</p>
+            <h2 class="cf_project_title">The Rebuild</h2>
+            <div class="cf_project_price">$1,650 AUD</div>
+
+            <p class="cf_project_intro">
+              For the business owner who is ready to properly fix it, whether you have completed The Reset or already understand the problem. We build the strategy and create the content needed to put it into practice.
+            </p>
+
+            <a class="cs_btn cs_style_1 cs_focus_2 cf_project_action" href="mailto:hello@creativefolk.com.au?subject=The%20Rebuild%20Enquiry">
+              <span>Book The Rebuild</span>
+            </a>
+          </div>
+
+          <div class="cf_project_details">
+            <h3>What we do</h3>
+            <ul>
+              <li>Audit your current social media presence and key website pages</li>
+              <li>Develop a written strategy with defined content pillars and clear priorities</li>
+              <li>Create 12 pieces of content with captions based on the strategy</li>
+              <li>Include up to 4 Reels using your supplied footage</li>
+              <li>Include one consolidated round of revisions</li>
+            </ul>
+
+            <h3>What we need from you</h3>
+            <ul>
+              <li>Complete one short form, which takes approximately 5 to 10 minutes. You can send a voice note or video instead of typing your responses.</li>
+              <li>Attend one 30-minute strategy call with Creative Folk</li>
+              <li>Provide any existing brand assets, images or video footage you would like us to use</li>
+            </ul>
+
+            <div class="cf_project_meta">
+              <strong>Turnaround:</strong> 7–10 business days<br>
+              <strong>Optional add-on:</strong> 30-minute strategy handover call, $150 AUD
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cs_height_130 cs_height_lg_70"></div>
+    </section>
+
+    <!-- Final booking call to action -->
+    <section>
+      <div class="container">
+        <div class="cs_cta cs_style_1 text-center cf_booking_cta">
+          <div class="cs_height_130 cs_height_lg_70"></div>
+
+          <h2 class="cs_cta_title cs_normal text-uppercase cs_primary_color cs_font_70">
+            STILL NOT SURE?
+          </h2>
+
+          <div class="cs_height_30 cs_height_lg_20"></div>
+
+          <p class="cs_cta_subtitle cs_medium cs_primary_color cs_font_25">
+            Start with a strategy session and we’ll work out what needs attention first.
+          </p>
+
+          <div class="cs_height_30 cs_height_lg_20"></div>
+
+          <script type="text/javascript" async src="https://static.zcal.co/embed/v1/embed.js"></script>
+          <div class="zcal-inline-widget">
+            <a href="https://zcal.co/i/ZJHwr_RS">Strategy Session - Schedule a meeting</a>
+          </div>
+
+          <div class="cs_height_130 cs_height_lg_70"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer id="contact" class="cs_footer cs_style_1 cs_focus_bg cs_white_color">
+    <div class="cs_height_85 cs_height_lg_65"></div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-4 col-md-4">
+          <div class="cs_widget_wrap">
+            <h2 class="cs_widget_title cs_white_color cs_font_25 text-uppercase cs_normal">Location</h2>
+            <p class="cs_fooer_text cs_font_18 cs_opacity_07 mb-0">
+              Chiang Mai, Thailand<br>
+              Serving folks across the globe
+            </p>
+          </div>
+        </div>
+
+        <div class="col-xl-4 col-md-4">
+          <div class="cs_widget_wrap">
+            <h2 class="cs_widget_title cs_white_color cs_font_25 text-uppercase cs_normal">Contact us</h2>
+            <ul class="cs_text_list cs_mp_0 cs_opacity_07 mb-0">
+              <li class="cs_font_18">
+                <a href="mailto:hello@creativefolk.com.au?subject=Website%20enquiry">hello@creativefolk.com.au</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-xl-4 col-md-4">
+          <div class="cs_widget_wrap">
+            <h2 class="cs_widget_title cs_white_color cs_font_25 text-uppercase cs_normal">Follow</h2>
+            <div class="cs_social cs_style_1">
+              <a class="cs_center cs_font_18" href="https://www.facebook.com/creativefolkau" target="_blank" rel="noopener noreferrer" aria-label="Creative Folk on Facebook">
+                <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+              </a>
+              <a class="cs_center cs_font_18" href="https://www.linkedin.com/company/creativefolkau" target="_blank" rel="noopener noreferrer" aria-label="Creative Folk on LinkedIn">
+                <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+              </a>
+              <a class="cs_center cs_font_18" href="https://www.instagram.com/creativefolkau" target="_blank" rel="noopener noreferrer" aria-label="Creative Folk on Instagram">
+                <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cs_height_60 cs_height_lg_50"></div>
+  </footer>
+
+  <!-- Shared website scripts -->
+  <script src="assets/js/plugins/jquery-3.6.0.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

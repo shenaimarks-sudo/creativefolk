@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Page information -->
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Creative Folk">
+  <meta name="description" content="Practical training, operational, team and client support from Creative Folk.">
+
+  <!-- Favicon -->
+  <link rel="icon" href="assets/img/hero/BLACK_Logo_BG.svg">
+  <title>Business Support | Creative Folk</title>
+
+  <!-- Shared website styles -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <style>
+    /* ============================================================
+       HERO
+    ============================================================= */
+    .cf_support_hero {
+      width: 100%;
+      max-width: 1400px;
+    }
+
+    .cf_support_label {
+      display: inline-flex;
+      align-items: center;
+      min-height: 42px;
+      padding: 8px 18px;
+      margin-bottom: 24px;
+      border: 2px solid #5533d8;
+      border-radius: 999px;
+      color: #5533d8;
+      font-size: 16px;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      line-height: 1;
+      text-transform: uppercase;
+    }
+
+    .cf_support_title {
+      max-width: 1200px;
+      margin: 0;
+      padding: 0.05em 0;
+      color: #5533d8;
+      font-size: clamp(54px, 6.2vw, 94px);
+      line-height: 1.02;
+      text-transform: uppercase;
+    }
+
+    .cf_support_subheading {
+      margin: 18px 0 0;
+      color: #5533d8;
+      font-size: clamp(26px, 3vw, 42px);
+      font-weight: 500;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+
+    .cf_support_intro {
+      width: 100%;
+      max-width: 1050px;
+      margin: 42px 0 0;
+      color: rgba(31, 31, 31, 0.72);
+      font-size: clamp(20px, 1.65vw, 24px);
+      line-height: 1.5;
+    }
+
+    .cf_support_nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 36px;
+    }
+
+    .cf_support_nav .cs_btn {
+      min-width: 190px;
+      justify-content: center;
+    }
+
+    /* ============================================================
+       SUPPORT CATEGORIES
+    ============================================================= */
+    .cf_support_section {
+      scroll-margin-top: 100px;
+    }
+
+    .cf_support_section_pink {
+      background: #fa7bd4;
+    }
+
+    .cf_support_section_blue {
+      background: #68c6f1;
+    }
+
+    .cf_support_section_lavender {
+      background: #bf99ff;
+    }
+
+    .cf_support_section_purple {
+      background: #5533d8;
+      color: #ffffff;
+    }
+
+    .cf_support_layout {
+      display: grid;
+      grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+      gap: 70px;
+      align-items: start;
+    }
+
+    .cf_support_number {
+      margin-bottom: 14px;
+      color: rgba(31, 31, 31, 0.65);
+      font-size: 17px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+    }
+
+    .cf_support_section_purple .cf_support_number {
+      color: #68c6f1;
+    }
+
+    .cf_support_section h2 {
+      max-width: 680px;
+      margin-bottom: 26px;
+      color: #1f1f1f;
+      font-size: clamp(38px, 4vw, 60px);
+      line-height: 1.05;
+      text-transform: uppercase;
+    }
+
+    .cf_support_section_purple h2 {
+      color: #ffffff;
+    }
+
+    .cf_support_summary {
+      max-width: 620px;
+      margin-bottom: 0;
+      color: #1f1f1f;
+      font-size: 20px;
+      line-height: 1.55;
+    }
+
+    .cf_support_section_purple .cf_support_summary {
+      color: rgba(255, 255, 255, 0.82);
+    }
+
+    .cf_support_details {
+      padding: 40px;
+      border-radius: 28px;
+      background: #ffffff;
+      color: #1f1f1f;
+    }
+
+    .cf_support_details h3 {
+      margin-bottom: 20px;
+      color: #5533d8;
+      font-size: 22px;
+      text-transform: none;
+    }
+
+    .cf_support_details ul {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+
+    .cf_support_details li {
+      position: relative;
+      padding: 15px 0 15px 24px;
+      border-bottom: 1px solid rgba(31, 31, 31, 0.13);
+      font-size: 18px;
+      line-height: 1.5;
+    }
+
+    .cf_support_details li:first-child {
+      padding-top: 0;
+    }
+
+    .cf_support_details li:last-child {
+      padding-bottom: 0;
+      border-bottom: 0;
+    }
+
+    .cf_support_details li::before {
+      position: absolute;
+      top: 24px;
+      left: 0;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #fa7bd4;
+      content: "";
+    }
+
+    .cf_support_details li:first-child::before {
+      top: 9px;
+    }
+
+    /* ============================================================
+       HOW SUPPORT WORKS
+    ============================================================= */
+    .cf_support_process {
+      max-width: 1100px;
+    }
+
+    .cf_support_process h2 {
+      margin-bottom: 30px;
+      font-size: clamp(38px, 4vw, 60px);
+      line-height: 1.08;
+      text-transform: uppercase;
+    }
+
+    .cf_support_process p {
+      max-width: 1000px;
+      margin-bottom: 22px;
+      font-size: 20px;
+      line-height: 1.55;
+    }
+
+    /* ============================================================
+       FINAL CTA
+    ============================================================= */
+    .cf_support_cta {
+      background: #68c6f1;
+    }
+
+    /* ============================================================
+       RESPONSIVE STYLES
+    ============================================================= */
+    @media (max-width: 991px) {
+      .cf_support_layout {
+        grid-template-columns: 1fr;
+        gap: 44px;
+      }
+
+      .cf_support_nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .cf_support_nav .cs_btn {
+        width: 100%;
+        max-width: 320px;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .cs_site_branding img {
+        width: 95px !important;
+        max-width: 95px !important;
+      }
+    }
+
+    @media (max-width: 575px) {
+      .cf_support_label {
+        min-height: 38px;
+        margin-bottom: 20px;
+        font-size: 14px;
+      }
+
+      .cf_support_title {
+        font-size: 44px;
+        line-height: 1.08;
+      }
+
+      .cf_support_subheading {
+        font-size: 25px;
+      }
+
+      .cf_support_intro {
+        margin-top: 32px;
+        font-size: 19px;
+      }
+
+      .cf_support_section h2 {
+        font-size: 40px;
+      }
+
+      .cf_support_summary {
+        font-size: 18px;
+      }
+
+      .cf_support_details {
+        padding: 26px;
+        border-radius: 22px;
+      }
+
+      .cf_support_process p {
+        font-size: 18px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Site header -->
+  <header class="cs_site_header cs_style_1 cs_sticky_header">
+    <div class="cs_main_header">
+      <div class="container">
+        <div class="cs_main_header_in">
+          <div class="cs_main_header_left">
+            <a class="cs_site_branding" href="index.html#hero" aria-label="Creative Folk home">
+              <img src="assets/img/hero/BLACK_Logo_BG.svg" alt="Creative Folk">
+            </a>
+          </div>
+
+          <div class="cs_main_header_center">
+            <nav class="cs_nav" aria-label="Main navigation">
+              <ul class="cs_nav_list">
+                <li><a href="index.html#hero">Home</a></li>
+                <li class="menu-item-has-children active">
+                  <a href="services.html">Services</a>
+                  <ul>
+                    <li><a href="business-support.html">Business Support</a></li>
+                    <li><a href="social-media-services.html">Social Media</a></li>
+                  </ul>
+                </li>
+                <li><a href="strategy-session.html">Strategy Session</a></li>
+                <li><a href="about-us.html">About the Folks</a></li>
+              </ul>
+            </nav>
+          </div>
+
+          <div class="cs_main_header_right">
+            <a class="cs_btn cs_style_1 cs_border_btn" href="contact.html">
+              <span>Work with us</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section>
+      <div class="cs_height_170 cs_height_lg_120"></div>
+
+      <div class="container">
+        <div class="cf_support_hero">
+          <p class="cf_support_label">Business Support</p>
+          <h1 class="cf_support_title cs_medium">Practical Support</h1>
+          <p class="cf_support_subheading">For You, Your Team and Your Clients</p>
+          <p class="cf_support_intro">
+            We help make the moving parts of your business easier to understand, easier to use and easier to hand over.
+            That might mean clearer training, better processes, stronger internal resources or a smoother client experience.
+          </p>
+
+          <div class="cf_support_nav">
+            <a class="cs_btn cs_style_1 cs_border_btn" href="#training-support"><span>Training Support</span></a>
+            <a class="cs_btn cs_style_1 cs_border_btn" href="#operational-support"><span>Operational Support</span></a>
+            <a class="cs_btn cs_style_1 cs_border_btn" href="#team-support"><span>Team Support</span></a>
+            <a class="cs_btn cs_style_1 cs_border_btn" href="#client-support"><span>Client Support</span></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="cs_height_110 cs_height_lg_75"></div>
+    </section>
+
+    <!-- Training support -->
+    <section id="training-support" class="cf_support_section cf_support_section_pink">
+      <div class="cs_height_110 cs_height_lg_70"></div>
+      <div class="container">
+        <div class="cf_support_layout">
+          <div>
+            <p class="cf_support_number">01</p>
+            <h2>Training Support</h2>
+            <p class="cf_support_summary">
+              Turn what your team needs to know into training that is clear, practical and easy to use.
+            </p>
+          </div>
+          <div class="cf_support_details">
+            <h3>How we can help</h3>
+            <ul>
+              <li>Design onboarding and induction resources</li>
+              <li>Create training guides, workbooks, slide decks and facilitator notes</li>
+              <li>Turn complex information into clear learning pathways</li>
+              <li>Review and simplify existing training materials</li>
+              <li>Develop practical resources your team can refer back to</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="cs_height_110 cs_height_lg_70"></div>
+    </section>
+
+    <!-- Operational support -->
+    <section id="operational-support" class="cf_support_section cf_support_section_blue">
+      <div class="cs_height_110 cs_height_lg_70"></div>
+      <div class="container">
+        <div class="cf_support_layout">
+          <div>
+            <p class="cf_support_number">02</p>
+            <h2>Operational Support</h2>
+            <p class="cf_support_summary">
+              Get repeated tasks, decisions and workflows out of your head and into a format people can follow.
+            </p>
+          </div>
+          <div class="cf_support_details">
+            <h3>How we can help</h3>
+            <ul>
+              <li>Document standard operating procedures and recurring workflows</li>
+              <li>Create checklists, templates and process guides</li>
+              <li>Map responsibilities, handovers and points of approval</li>
+              <li>Develop reporting templates and practical tracking resources</li>
+              <li>Simplify processes that have become difficult to manage</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="cs_height_110 cs_height_lg_70"></div>
+    </section>
+
+    <!-- Team support -->
+    <section id="team-support" class="cf_support_section cf_support_section_lavender">
+      <div class="cs_height_110 cs_height_lg_70"></div>
+      <div class="container">
+        <div class="cf_support_layout">
+          <div>
+            <p class="cf_support_number">03</p>
+            <h2>Team Support</h2>
+            <p class="cf_support_summary">
+              Give your team the context, resources and direction they need to work with more confidence.
+            </p>
+          </div>
+          <div class="cf_support_details">
+            <h3>How we can help</h3>
+            <ul>
+              <li>Create team handbooks, role guides and internal resources</li>
+              <li>Build clearer onboarding and handover documents</li>
+              <li>Organise information so it is easier to find and maintain</li>
+              <li>Develop reusable templates for recurring team tasks</li>
+              <li>Clarify how work moves between people and responsibilities</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="cs_height_110 cs_height_lg_70"></div>
+    </section>
+
+    <!-- Client support -->
+    <section id="client-support" class="cf_support_section cf_support_section_purple">
+      <div class="cs_height_110 cs_height_lg_70"></div>
+      <div class="container">
+        <div class="cf_support_layout">
+          <div>
+            <p class="cf_support_number">04</p>
+            <h2>Client Support</h2>
+            <p class="cf_support_summary">
+              Make every step of working with your business clearer, easier and more consistent for your clients.
+            </p>
+          </div>
+          <div class="cf_support_details">
+            <h3>How we can help</h3>
+            <ul>
+              <li>Improve client onboarding and offboarding resources</li>
+              <li>Create welcome packs, service guides and preparation documents</li>
+              <li>Write reusable client emails, forms and communication templates</li>
+              <li>Map the client journey and identify points of confusion or friction</li>
+              <li>Make expectations, next steps and responsibilities easier to understand</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="cs_height_110 cs_height_lg_70"></div>
+    </section>
+
+    <!-- How support works -->
+    <section>
+      <div class="cs_height_110 cs_height_lg_70"></div>
+      <div class="container">
+        <div class="cf_support_process">
+          <h2>Support Built Around the Outcome</h2>
+          <p>
+            We begin with the result you need—clearer training, a documented process, stronger team resources
+            or a better client experience—and scope the work around that outcome.
+          </p>
+          <p class="mb-0">
+            After an initial conversation, we will recommend a focused project, a practical block of support or a staged plan
+            that fits the size and complexity of the work.
+          </p>
+        </div>
+      </div>
+      <div class="cs_height_110 cs_height_lg_70"></div>
+    </section>
+
+    <!-- Final call to action -->
+    <section class="cf_support_cta">
+      <div class="container">
+        <div class="cs_cta cs_style_1 text-center cf_booking_cta">
+          <div class="cs_height_110 cs_height_lg_70"></div>
+          <h2 class="cs_cta_title cs_normal text-uppercase cs_primary_color cs_font_70">Let's Make Things Easier</h2>
+          <div class="cs_height_30 cs_height_lg_20"></div>
+          <h3 class="cs_cta_subtitle cs_medium cs_primary_color cs_font_25">
+            Tell us what feels messy, difficult to hand over or harder than it needs to be.
+          </h3>
+          <div class="cs_height_35 cs_height_lg_25"></div>
+          <a class="cs_btn cs_style_1 cs_focus_2" href="contact.html">
+            <span>Contact Creative Folk</span>
+          </a>
+          <div class="cs_height_110 cs_height_lg_70"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer id="contact" class="cs_footer cs_style_1 cs_focus_bg cs_white_color">
+    <div class="cs_height_85 cs_height_lg_65"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-4 col-md-4">
+          <div class="cs_widget_wrap">
+            <h2 class="cs_widget_title cs_white_color cs_font_25 text-uppercase cs_normal">Location</h2>
+            <p class="cs_fooer_text cs_font_18 cs_opacity_07 mb-0">
+              Chiang Mai, Thailand<br>
+              Serving folks across the globe
+            </p>
+          </div>
+        </div>
+
+        <div class="col-xl-4 col-md-4">
+          <div class="cs_widget_wrap">
+            <h2 class="cs_widget_title cs_white_color cs_font_25 text-uppercase cs_normal">Contact us</h2>
+            <ul class="cs_text_list cs_mp_0 cs_opacity_07 mb-0">
+              <li class="cs_font_18">
+                <a href="mailto:hello@creativefolk.com.au?subject=Website%20enquiry">hello@creativefolk.com.au</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-xl-4 col-md-4">
+          <div class="cs_widget_wrap">
+            <h2 class="cs_widget_title cs_white_color cs_font_25 text-uppercase cs_normal">Follow</h2>
+            <div class="cs_social cs_style_1">
+              <a class="cs_center cs_font_18" href="https://www.facebook.com/creativefolkau" target="_blank" rel="noopener noreferrer" aria-label="Creative Folk on Facebook">
+                <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+              </a>
+              <a class="cs_center cs_font_18" href="https://www.linkedin.com/company/creativefolkau" target="_blank" rel="noopener noreferrer" aria-label="Creative Folk on LinkedIn">
+                <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+              </a>
+              <a class="cs_center cs_font_18" href="https://www.instagram.com/creativefolkau" target="_blank" rel="noopener noreferrer" aria-label="Creative Folk on Instagram">
+                <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="cs_height_60 cs_height_lg_50"></div>
+  </footer>
+
+  <!-- Shared website scripts -->
+  <script src="assets/js/plugins/jquery-3.6.0.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

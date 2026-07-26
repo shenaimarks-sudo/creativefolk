@@ -8,13 +8,13 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="author" content="Creative Folk">
+  <meta name="description" content="Creative Folk helps small businesses with strategy, business support, systems, training, content and social media.">
   <!-- Favicon Icon -->
   <link rel="icon" href="assets/img/hero/BLACK_Logo_BG.svg">
   <title>Creative Folk | Good folk. Great work.</title>
   <!-- Plugins Links -->
   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
   <link rel="stylesheet" href="assets/css/fontawesome.min.css">
-  <link rel="stylesheet" href="assets/css/odometer-theme-default.css">
   <link rel="stylesheet" href="assets/css/slick.css">
   <!-- Style Links -->
   <link rel="stylesheet" href="assets/css/style.css">
@@ -26,36 +26,9 @@
   ============================================================= -->
   <style>
     /* ============================================================
-       01. HEADER / LOGO
-    ============================================================= */
-    .cs_main_header_left {
-      display: flex !important;
-      align-items: center !important;
-      min-width: 150px !important;
-      overflow: visible !important;
-    }
-
-    .cs_site_branding {
-      display: flex !important;
-      align-items: center !important;
-      width: 120px !important;
-      max-width: 120px !important;
-      height: auto !important;
-      overflow: visible !important;
-    }
-
-    .cs_site_branding img {
-      display: block !important;
-      width: 130px !important;
-      max-width: 130px !important;
-      height: auto !important;
-      opacity: 1 !important;
-      visibility: visible !important;
-    }
-
-    /* ============================================================
        02. HERO SECTION, MOBILE POSITIONING
     ============================================================= */
+    
     @media (max-width: 767px) {
       .cs_site_header,
       .cs_main_header {
@@ -67,11 +40,6 @@
         padding-top: 20px !important;
         padding-bottom: 0 !important;
         align-items: center !important;
-      }
-
-      .cs_site_branding img {
-        width: 95px !important;
-        max-width: 95px !important;
       }
 
       #hero .cs_height_150,
@@ -164,6 +132,43 @@
     /* ============================================================
        04. SERVICES SECTION
     ============================================================= */
+ /* ============================================================
+   SERVICES INTRO POSITIONING
+============================================================= */
+#services .cs_services_intro {
+  display: block !important;
+}
+
+#services .cs_services_intro h2 {
+  display: inline-block;
+  position: relative;
+  line-height: 0.9 !important;
+  padding-bottom: 35px;
+  margin-bottom: 32px !important;
+}
+
+#services .cs_services_intro h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 150px;
+  height: 2px;
+  background: #FA7BD4;
+}
+
+#services .cs_services_intro p {
+  display: block !important;
+  max-width: 850px;
+  margin: 0 !important;
+}
+    /* ============================================================
+   SERVICE CARD FONTS
+============================================================= */
+
+.cf_service_card p {
+  font-family: 'Bricolage Grotesque', sans-serif !important;
+}
     .cs_services_intro {
       display: flex;
       justify-content: space-between;
@@ -178,21 +183,32 @@
     }
 
     .cf_service_card {
+      position: relative;
       min-height: 230px;
       border-radius: 24px;
       background: #68C6F1;
       padding: 32px;
       display: flex;
       align-items: flex-end;
+      color: #1f1f1f;
+      cursor: pointer;
+      text-decoration: none;
       transition: 0.3s ease;
     }
 
     .cf_service_card:hover {
       background: #FA7BD4;
+      color: #1f1f1f;
+      transform: translateY(-4px);
+    }
+
+    .cf_service_card:focus-visible {
+      outline: 3px solid #5533d8;
+      outline-offset: 4px;
     }
 
     .cf_service_card h5 {
-      font-size: 22px;
+      font-size: 24px;
       line-height: 1.15;
       color: #1f1f1f;
       margin: 0;
@@ -227,7 +243,108 @@
         line-height: 1.15;
       }
     }
+.cf_services_grid_three {
+  grid-template-columns: repeat(3, 1fr);
+}
 
+.cf_service_card_large {
+  min-height: 250px;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.cf_service_card_large h5 {
+  margin-bottom: 20px;
+}
+
+.cf_service_card_large p {
+  font-size: 16px;
+  line-height: 1.45;
+  color: #1f1f1f;
+  margin: 0;
+}
+
+.cf_service_card_arrow {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 54px;
+  height: 54px;
+  overflow: hidden;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+}
+
+.cf_service_card_arrow span {
+  position: relative;
+  display: block;
+  width: 20px;
+  height: 20px;
+}
+
+.cf_service_card_arrow img {
+  position: absolute;
+  display: block;
+  width: 20px;
+  height: 20px;
+  transition: transform 0.3s ease;
+}
+
+.cf_service_card_arrow img:first-child {
+  transform: translate(0, 0);
+}
+
+.cf_service_card_arrow img:last-child {
+  transform: translate(-30px, 30px);
+}
+
+.cf_service_card:hover .cf_service_card_arrow img:first-child,
+.cf_service_card:focus-visible .cf_service_card_arrow img:first-child {
+  transform: translate(30px, -30px);
+}
+
+.cf_service_card:hover .cf_service_card_arrow img:last-child,
+.cf_service_card:focus-visible .cf_service_card_arrow img:last-child {
+  transform: translate(0, 0);
+}
+
+@media (max-width: 991px) {
+  .cf_services_grid_three {
+    grid-template-columns: 1fr;
+  }
+
+  .cf_service_card_large {
+    min-height: 260px;
+  }
+}
+
+@media (max-width: 575px) {
+  .cf_service_card_large {
+    min-height: 230px;
+  }
+
+  .cf_service_card_large p {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  .cf_service_card_arrow {
+    top: 18px;
+    right: 18px;
+    width: 46px;
+    height: 46px;
+  }
+
+  .cf_service_card_arrow span,
+  .cf_service_card_arrow img {
+    width: 17px;
+    height: 17px;
+  }
+}
     /* ============================================================
        05. CLIENT FEEDBACK, DECORATIVE SHAPES
     ============================================================= */
@@ -286,6 +403,13 @@
    /* ============================================================
    06. CLIENT FEEDBACK, SLIDER LAYOUT
 ============================================================= */
+/* ============================================================
+   TESTIMONIAL FONTS
+============================================================= */
+#feedback .cs_testimonial_text,
+#feedback .cs_testimonial_author {
+  font-family: 'Bricolage Grotesque', sans-serif !important;
+}
 #feedback .cs_slider {
   position: relative;
   max-width: 1350px;
@@ -511,32 +635,15 @@
   padding-left: 45px !important;
   padding-right: 45px !important;
 }
-    /* ============================================================
-       09. FOOTER / CONTACT
-    ============================================================= */
-    #contact a:hover {
-      color: #FA7BD4 !important;
-    }
+
   </style>
 </head>
-
-<!-- Link Preview Image -->
-<meta property="og:title" content="Creative Folk">
-<meta property="og:description" content="Good folk. Great work.">
-<meta property="og:image" content="https://www.creativefolk.com.au/assets/img/hero/preview1.png">
-<meta property="og:url" content="https://www.creativefolk.com.au">
-<meta property="og:type" content="website">
-
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Creative Folk">
-<meta name="twitter:description" content="Good folk. Great work.">
-<meta name="twitter:image" content="https://www.creativefolk.com.au/assets/img/hero/preview1.png">
 
 <body>
   <div class="cs_preloader cs_center cs_focus_bg">
     <div class="cs_preloader_in position-relative">
-      <img class="cs_half_circle_shape cs_rotate_reverse position-absolute" src="assets/img/shapes/half_circel_3.svg" alt="Circla_shape">
-      <img class="cs_half_circle_shape position-absolute" src="assets/img/shapes/half_circel_2.svg" alt="Circla_shape">
+      <img class="cs_half_circle_shape cs_rotate_reverse position-absolute" src="assets/img/shapes/half_circel_3.svg" alt="">
+      <img class="cs_half_circle_shape position-absolute" src="assets/img/shapes/half_circel_2.svg" alt="">
     </div>
     <span class="cs_perloader_text">Loading...</span>
   </div>
@@ -547,21 +654,27 @@
         <div class="cs_main_header_in">
           <div class="cs_main_header_left">
             <a class="cs_site_branding" href="#hero">
-              <img src="assets/img/hero/BLACK_Logo_BG.svg" alt="Logo">
+              <img src="assets/img/hero/BLACK_Logo_BG.svg" alt="Creative Folk">
             </a>
           </div>
           <div class="cs_main_header_center">
-            <div class="cs_nav">
+            <nav class="cs_nav" aria-label="Main navigation">
               <ul class="cs_nav_list">
                 <li class="active"><a href="#hero">Home</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#feedback">Kind words</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li class="menu-item-has-children">
+                  <a href="services.html">Services</a>
+                  <ul>
+                    <li><a href="business-support.html">Business Support</a></li>
+                    <li><a href="social-media-services.html">Social Media</a></li>
+                  </ul>
+                </li>
+                <li><a href="strategy-session.html">Strategy Session</a></li>
+                <li><a href="about-us.html">About the Folks</a></li>
               </ul>
-            </div>
+            </nav>
           </div>
           <div class="cs_main_header_right">
-            <a href="#contact" class="cs_btn cs_style_1 cs_border_btn"><span>Work with us</span></a>
+            <a href="contact.html" class="cs_btn cs_style_1 cs_border_btn"><span>Work with us</span></a>
           </div>
         </div>
       </div>
@@ -577,7 +690,7 @@
           <div class="col-xl-5 col-lg-6">
             <div>
               <h1 class="cs_hero_title text-uppercase cs_font_90 cs_medium cs_focus_color_2">CREATIVE FOLK.</h1>
-              <p class="cs_hero_text cs_font_18 cs_primary_color cs_opacity_07">Hi, folks! I'm Shenai. Professional box ticker, chaos untangler, and founder of Creative Folk.</p>
+              <p class="cs_hero_text cs_font_18 cs_primary_color">Hi, folks! I'm Shenai. Professional box ticker, chaos untangler, and founder of Creative Folk.</p>
               <a class="cs_btn cs_style_3" href="#about">
                 <img src="assets/img/icons/arrow_down_f1.svg" alt="">
                 <img src="assets/img/icons/arrow_down_f1.svg" alt="">
@@ -587,21 +700,16 @@
           <div class="col-xl-7 col-lg-6">
             <div class="cs_imagebox cs_style_2 position-relative">
               <div class="cs_imagebox_in position-relative">
-                <img src="assets/img/about/sm_1.svg" alt="hero-img">
-                <img class="cs_circle_shape" src="assets/img/shapes/half_circel.svg" alt="hero-shape">
-                <img class="cs_sprin_animation" src="assets/img/shapes/star_shape_7.svg" alt="hero-shape">
-              </div>
-              <div class="cs_social cs_style_1 cs_type_1">
-                <a class="cs_center" href="https://www.facebook.com/creativefolkau" target="_blank" rel="noopener"><i class="fa-brands fa-facebook-f"></i></a>
-                <a class="cs_center" href="https://www.linkedin.com/company/creativefolkau" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin-in"></i></a>
-                <a class="cs_center" href="https://www.instagram.com/creativefolkau" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i></a>
+                <img src="assets/img/about/sm_1.svg" alt="Shenai from Creative Folk">
+                <img class="cs_circle_shape" src="assets/img/shapes/half_circel.svg" alt="">
+                <img class="cs_sprin_animation" src="assets/img/shapes/star_shape_7.svg" alt="">
               </div>
             </div>
             <div class="cs_height_lg_10"></div>
           </div>
         </div>
       </div>
-      <div class="cs_height_80 cs_height_lg_60"></div>
+      <div class="cs_height_20 cs_height_lg_60"></div>
     </section>
     <!-- End Hero Section -->
     <!-- Start About Section -->
@@ -611,29 +719,29 @@
           <div class="cs_moving_container_in">
             <div class="cs_moving_content cs_slide_left">
               <div class="d-flex align-items-center">
-                <img class="cs_sprin_animation cs_sprin_animation_10" src="assets/img/shapes/star_shape_4.svg" alt="brand image">
+                <img class="cs_sprin_animation cs_sprin_animation_10" src="assets/img/shapes/star_shape_4.svg" alt="">
                 <h3 class="cs_focus_color cs_font_40 cs_medium mb-0">GOOD FOLK. GREAT WORK.</h3>
               </div>
               <div class="d-flex align-items-center">
-                <img class="cs_sprin_animation cs_sprin_animation_10" src="assets/img/shapes/star_shape_4.svg" alt="brand image">
+                <img class="cs_sprin_animation cs_sprin_animation_10" src="assets/img/shapes/star_shape_4.svg" alt="">
                 <h3 class="cs_focus_color cs_font_40 cs_medium mb-0">GOOD FOLK. GREAT WORK.</h3>
               </div>
               <div class="d-flex align-items-center">
-                <img class="cs_sprin_animation cs_sprin_animation_10" src="assets/img/shapes/star_shape_4.svg" alt="brand image">
+                <img class="cs_sprin_animation cs_sprin_animation_10" src="assets/img/shapes/star_shape_4.svg" alt="">
                 <h3 class="cs_focus_color cs_font_40 cs_medium mb-0">GOOD FOLK. GREAT WORK.</h3>
               </div>
             </div>
             <div class="cs_moving_content cs_slide_left">
               <div class="d-flex align-items-center">
-                <img class="cs_sprin_animation cs_sprin_animation_10" src="assets/img/shapes/star_shape_4.svg" alt="brand image">
+                <img class="cs_sprin_animation cs_sprin_animation_10" src="assets/img/shapes/star_shape_4.svg" alt="">
                 <h3 class="cs_focus_color cs_font_40 cs_medium mb-0">GOOD FOLK. GREAT WORK.</h3>
               </div>
               <div class="d-flex align-items-center">
-                <img class="cs_sprin_animation cs_sprin_animation_10" src="assets/img/shapes/star_shape_4.svg" alt="brand image">
+                <img class="cs_sprin_animation cs_sprin_animation_10" src="assets/img/shapes/star_shape_4.svg" alt="">
                 <h3 class="cs_focus_color cs_font_40 cs_medium mb-0">GOOD FOLK. GREAT WORK.</h3>
               </div>
               <div class="d-flex align-items-center">
-                <img class="cs_sprin_animation cs_sprin_animation_10" src="assets/img/shapes/star_shape_4.svg" alt="brand image">
+                <img class="cs_sprin_animation cs_sprin_animation_10" src="assets/img/shapes/star_shape_4.svg" alt="">
                 <h3 class="cs_focus_color cs_font_40 cs_medium mb-0">GOOD FOLK. GREAT WORK.</h3>
               </div>
             </div>
@@ -643,29 +751,29 @@
           <div class="cs_moving_container_in">
             <div class="cs_moving_content cs_slide_left">
               <div class="d-flex align-items-center">
-                <img class="cs_sprin_animation cs_sprin_animation_10" src="assets/img/shapes/star_shape_4.svg" alt="brand image">
+                <img class="cs_sprin_animation cs_sprin_animation_10" src="assets/img/shapes/star_shape_4.svg" alt="">
                 <h3 class="cs_focus_color cs_font_40 cs_medium mb-0">GOOD FOLK. GREAT WORK.</h3>
               </div>
               <div class="d-flex align-items-center">
-                <img class="cs_sprin_animation cs_sprin_animation_10" src="assets/img/shapes/star_shape_4.svg" alt="brand image">
+                <img class="cs_sprin_animation cs_sprin_animation_10" src="assets/img/shapes/star_shape_4.svg" alt="">
                 <h3 class="cs_focus_color cs_font_40 cs_medium mb-0">GOOD FOLK. GREAT WORK.</h3>
               </div>
               <div class="d-flex align-items-center">
-                <img class="cs_sprin_animation cs_sprin_animation_10" src="assets/img/shapes/star_shape_4.svg" alt="brand image">
+                <img class="cs_sprin_animation cs_sprin_animation_10" src="assets/img/shapes/star_shape_4.svg" alt="">
                 <h3 class="cs_focus_color cs_font_40 cs_medium mb-0">GOOD FOLK. GREAT WORK.</h3>
               </div>
             </div>
             <div class="cs_moving_content cs_slide_left">
               <div class="d-flex align-items-center">
-                <img class="cs_sprin_animation cs_sprin_animation_10" src="assets/img/shapes/star_shape_4.svg" alt="brand image">
+                <img class="cs_sprin_animation cs_sprin_animation_10" src="assets/img/shapes/star_shape_4.svg" alt="">
                 <h3 class="cs_focus_color cs_font_40 cs_medium mb-0">GOOD FOLK. GREAT WORK.</h3>
               </div>
               <div class="d-flex align-items-center">
-                <img class="cs_sprin_animation cs_sprin_animation_10" src="assets/img/shapes/star_shape_4.svg" alt="brand image">
+                <img class="cs_sprin_animation cs_sprin_animation_10" src="assets/img/shapes/star_shape_4.svg" alt="">
                 <h3 class="cs_focus_color cs_font_40 cs_medium mb-0">GOOD FOLK. GREAT WORK.</h3>
               </div>
               <div class="d-flex align-items-center">
-                <img class="cs_sprin_animation cs_sprin_animation_10" src="assets/img/shapes/star_shape_4.svg" alt="brand image">
+                <img class="cs_sprin_animation cs_sprin_animation_10" src="assets/img/shapes/star_shape_4.svg" alt="">
                 <h3 class="cs_focus_color cs_font_40 cs_medium mb-0">GOOD FOLK. GREAT WORK.</h3>
               </div>
             </div>
@@ -683,44 +791,57 @@
   <div class="container">
     <div class="cs_services_intro">
       <h2 class="cs_section_title text-uppercase cs_font_70 cs_normal mb-0">WHAT WE DO</h2>
-      <p class="cs_line_top_2 cs_font_18 cs_primary_color mb-0">
-        We help businesses that are ready to grow.<br>
-        What we're really good at is finding the gap between where your business is and where your customers are, and closing it.
+      <p class="cs_font_18 cs_primary_color mb-0">
+        We make it easier for you, your team and your clients to connect.<br>
+        Start with a focused strategy session, get practical business support or hand over your social media.
       </p>
     </div>
 
     <div class="cs_height_60 cs_height_lg_40"></div>
 
-    <div class="cf_services_grid">
-      <div class="cf_service_card">
-        <h5>Social Media Strategy</h5>
-      </div>
+    <div class="cf_services_grid cf_services_grid_three">
+      <a class="cf_service_card cf_service_card_large" href="strategy-session.html">
+        <span class="cf_service_card_arrow" aria-hidden="true">
+          <span>
+            <img src="assets/img/icons/arrow_diag_right_white.svg" alt="">
+            <img src="assets/img/icons/arrow_diag_right_white.svg" alt="">
+          </span>
+        </span>
+        <h5>STRATEGY SESSION</h5>
+        <p>
+          When something feels off but you cannot quite name it, we look at what is happening across your business, identify the gaps and give you a clear plan for what to fix first.
+        </p>
+      </a>
 
-      <div class="cf_service_card">
-        <h5>Content &amp; Copywriting</h5>
-      </div>
+      <a class="cf_service_card cf_service_card_large" href="business-support.html">
+        <span class="cf_service_card_arrow" aria-hidden="true">
+          <span>
+            <img src="assets/img/icons/arrow_diag_right_white.svg" alt="">
+            <img src="assets/img/icons/arrow_diag_right_white.svg" alt="">
+          </span>
+        </span>
+        <h5>BUSINESS SUPPORT</h5>
+        <p>
+          Practical training, operational, team and client support that makes the moving parts of your business clearer, easier to use and easier to hand over.
+        </p>
+      </a>
 
-      <div class="cf_service_card">
-        <h5>Operations &amp; Systems</h5>
-      </div>
-
-      <div class="cf_service_card">
-        <h5>Training &amp; Learning Design</h5>
-      </div>
-
-      <div class="cf_service_card">
-        <h5>SEO &amp; Website Updates</h5>
-      </div>
-
-      <div class="cf_service_card">
-        <h5>Business Management Support</h5>
-      </div>
+      <a class="cf_service_card cf_service_card_large" href="social-media-services.html">
+        <span class="cf_service_card_arrow" aria-hidden="true">
+          <span>
+            <img src="assets/img/icons/arrow_diag_right_white.svg" alt="">
+            <img src="assets/img/icons/arrow_diag_right_white.svg" alt="">
+          </span>
+        </span>
+        <h5>SOCIAL MEDIA</h5>
+        <p>
+          Choose a focused project when something needs fixing, or monthly support when you want your planning, content and publishing handled consistently.
+        </p>
+      </a>
+      
     </div>
   </div>
-  <div class="cs_height_140 cs_height_lg_80"></div>
-  <p class="cs_font_18 cs_primary_color mb-0 text-center">
-    We're not a big agency. We're just really good folk who give a damn about your business.
-  </p>
+
   <div class="cs_height_130 cs_height_lg_80"></div>
 </section>
 <!-- End Service Section -->
@@ -746,9 +867,9 @@
               </div>
 
               <div class="cs_testimonial_in">
-                <p class="cs_testimonial_text cs_font_10 text-uppercase cs_primary_color">
+                <p class="cs_testimonial_text cs_font_10 cs_primary_color">
                   “Shenai has been an absolute rock for me as I’ve worked to scale my business.<br>
-                  She’s incredibly intelligent, quick-thinking, creative, and solution-focused. No matter the challenge, she always finds a way forward and won’t stop until the problem is solved and the right solution is in place. Working with Shenai has made a huge difference to my productivity and ability to deliver high-quality work.<br>
+                  She’s incredibly intelligent, quick-thinking, creative, and solution-focused. No matter the challenge, she always finds a way forward and won’t stop until the problem is solved and the right solution is in place.<br>Working with Shenai has made a huge difference to my productivity and ability to deliver high-quality work.
                   She’s a fantastic collaborator who genuinely cares about achieving great outcomes.<br>
                   I wouldn’t hesitate to recommend her to anyone looking for reliable, high-quality specialist support.”
                 </p>
@@ -764,7 +885,7 @@
               </div>
 
               <div class="cs_testimonial_in">
-                <p class="cs_testimonial_text cs_font_18 text-uppercase cs_primary_color">
+                <p class="cs_testimonial_text cs_font_18 cs_primary_color">
                   “Shenai was integral for our website and SEO updates.<br>
                   Within 3 days of updating our SEO, we received enquiries directly from our Google Business Profile.<br>
                   She helped refine our tone and structure, as well as our future marketing and operational plans.<br>
@@ -922,13 +1043,17 @@
     <!-- Start Cta Section -->
     <section>
       <div class="container">
-        <div class="cs_cta cs_style_1 text-center">
+        <div class="cs_cta cs_style_1 text-center cf_booking_cta">
           <div class="cs_height_130 cs_height_lg_70"></div>
           <div class="cs_cta_info">
-            <h2 class="cs_cta_title cs_normal text-uppercase cs_primary_color cs_font_70">GOT SOMETHING IN MIND?</h2>
-            <h3 class="cs_cta_subtitle cs_medium cs_primary_color cs_font_25">Let’s have a chat!</h3>
-<div style="height: 20px;"></div>
-<a class="cs_btn cs_style_1 cs_focus_2" href="mailto:hello@creativefolk.com.au?subject=Website%20enquiry"><span>Get in touch</span></a>
+            <h2 class="cs_cta_title cs_normal text-uppercase cs_focus_color cs_font_70">Let's Connect</h2>
+            <h3 class="cs_cta_subtitle cs_medium cs_primary_color cs_font_25">
+              Book a discovery call or send us an email.
+            </h3>
+            <div class="cs_height_20" aria-hidden="true"></div>
+            <a class="cs_btn cs_style_1 cs_focus_2" href="contact.html">
+              <span>Contact Creative Folk</span>
+            </a>
           </div>
           <div class="cs_height_150 cs_height_lg_80"></div>
         </div>
@@ -967,9 +1092,15 @@
         <div class="cs_widget_wrap">
           <h4 class="cs_widget_title cs_white_color cs_font_25 text-uppercase cs_normal">FOLLOW</h4>
           <div class="cs_social cs_style_1">
-            <a class="cs_center cs_font_18" href="https://www.facebook.com/creativefolkau" target="_blank" rel="noopener"><i class="fa-brands fa-facebook-f"></i></a>
-            <a class="cs_center cs_font_18" href="https://www.linkedin.com/company/creativefolkau" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin-in"></i></a>
-            <a class="cs_center cs_font_18" href="https://www.instagram.com/creativefolkau" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i></a>
+            <a class="cs_center cs_font_18" href="https://www.facebook.com/creativefolkau" target="_blank" rel="noopener noreferrer" aria-label="Creative Folk on Facebook">
+              <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+            </a>
+            <a class="cs_center cs_font_18" href="https://www.linkedin.com/company/creativefolkau" target="_blank" rel="noopener noreferrer" aria-label="Creative Folk on LinkedIn">
+              <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+            </a>
+            <a class="cs_center cs_font_18" href="https://www.instagram.com/creativefolkau" target="_blank" rel="noopener noreferrer" aria-label="Creative Folk on Instagram">
+              <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+            </a>
           </div>
         </div>
       </div>
@@ -981,8 +1112,6 @@
   <!-- Scripts -->
 <script src="assets/js/plugins/jquery-3.6.0.min.js"></script>
 <script src="assets/js/plugins/slick.min.js"></script>
-<script src="assets/js/plugins/odometer.min.js"></script>
-<script src="assets/js/plugins/isotope.pkg.min.js"></script>
 <script src="assets/js/main.js"></script>
 <!-- Creative Folk testimonial slider fix JS -->
 

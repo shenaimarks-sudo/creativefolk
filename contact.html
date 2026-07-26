@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Page information -->
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Creative Folk">
+  <meta name="description" content="Book a discovery call or email Creative Folk to talk about the support your business needs.">
+
+  <!-- Favicon -->
+  <link rel="icon" href="assets/img/hero/BLACK_Logo_BG.svg">
+  <title>Contact | Creative Folk</title>
+
+  <!-- Shared website styles -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <style>
+    /* ============================================================
+       CONTACT HERO
+    ============================================================= */
+    .cf_contact_hero {
+      width: 100%;
+      max-width: 1400px;
+    }
+
+    .cf_contact_label {
+      display: inline-flex;
+      align-items: center;
+      min-height: 42px;
+      padding: 8px 18px;
+      margin-bottom: 24px;
+      border: 2px solid #5533d8;
+      border-radius: 50px;
+      color: #5533d8;
+      font-size: 16px;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      line-height: 1;
+      text-transform: uppercase;
+    }
+
+    .cf_contact_title {
+      max-width: 1200px;
+      margin: 0;
+      padding: 0.06em 0;
+      color: #5533d8;
+      font-size: clamp(56px, 6.5vw, 96px);
+      line-height: 1.02;
+      text-transform: uppercase;
+    }
+
+    .cf_contact_subheading {
+      margin: 18px 0 0;
+      color: #5533d8;
+      font-size: clamp(26px, 3vw, 42px);
+      font-weight: 500;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+
+    .cf_contact_intro {
+      width: 100%;
+      max-width: 980px;
+      margin: 42px 0 0;
+      color: rgba(31, 31, 31, 0.72);
+      font-size: clamp(20px, 1.7vw, 25px);
+      line-height: 1.5;
+    }
+
+    /* ============================================================
+       CONTACT OPTIONS
+    ============================================================= */
+    .cf_contact_options {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 28px;
+    }
+
+    .cf_contact_card {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      min-height: 350px;
+      padding: 44px;
+      overflow: hidden;
+      border-radius: 30px;
+      color: #1f1f1f;
+    }
+
+    .cf_contact_card_call {
+      background: #fa7bd4;
+    }
+
+    .cf_contact_card_email {
+      background: #68c6f1;
+    }
+
+    .cf_contact_card h2 {
+      max-width: 620px;
+      margin-bottom: 24px;
+      color: #1f1f1f;
+      font-size: clamp(32px, 3vw, 48px);
+      line-height: 1.08;
+      text-transform: uppercase;
+    }
+
+    .cf_contact_card p {
+      max-width: 620px;
+      margin-bottom: 36px;
+      font-size: 20px;
+      line-height: 1.5;
+    }
+
+    .cf_contact_card_action {
+      margin-top: auto;
+    }
+
+    .cf_contact_pill {
+      display: inline-flex;
+      align-items: center;
+      min-width: 270px;
+      justify-content: center;
+      min-height: 64px;
+      padding: 14px 30px;
+      border: 2px solid #5533d8;
+      border-radius: 999px;
+      background: #5533d8;
+      color: #ffffff;
+      font-family: "Unbounded", sans-serif;
+      font-size: 17px;
+      font-weight: 600;
+      line-height: 1.2;
+      text-align: center;
+      text-decoration: none;
+      transition: background-color 0.25s ease, color 0.25s ease, transform 0.25s ease;
+    }
+
+    .cf_contact_pill:hover,
+    .cf_contact_pill:focus-visible {
+      background: #ffffff;
+      color: #5533d8;
+      transform: translateY(-3px);
+    }
+
+    .cf_contact_pill:focus-visible {
+      outline: 3px solid #1f1f1f;
+      outline-offset: 4px;
+    }
+
+    /* ============================================================
+       RESPONSIVE STYLES
+    ============================================================= */
+    @media (max-width: 991px) {
+      .cf_contact_options {
+        grid-template-columns: 1fr;
+      }
+
+      .cf_contact_card {
+        min-height: 340px;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .cs_site_branding img {
+        width: 95px !important;
+        max-width: 95px !important;
+      }
+    }
+
+    @media (max-width: 575px) {
+      .cf_contact_label {
+        min-height: 38px;
+        margin-bottom: 20px;
+        font-size: 14px;
+      }
+
+      .cf_contact_title {
+        font-size: 46px;
+        line-height: 1.08;
+      }
+
+      .cf_contact_subheading {
+        font-size: 25px;
+      }
+
+      .cf_contact_intro {
+        margin-top: 32px;
+        font-size: 19px;
+      }
+
+      .cf_contact_card {
+        min-height: 320px;
+        padding: 30px;
+        border-radius: 24px;
+      }
+
+      .cf_contact_card p {
+        font-size: 18px;
+      }
+
+      .cf_contact_pill {
+        width: 100%;
+        min-width: 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Site header -->
+  <header class="cs_site_header cs_style_1 cs_sticky_header">
+    <div class="cs_main_header">
+      <div class="container">
+        <div class="cs_main_header_in">
+          <div class="cs_main_header_left">
+            <a class="cs_site_branding" href="index.html#hero" aria-label="Creative Folk home">
+              <img src="assets/img/hero/BLACK_Logo_BG.svg" alt="Creative Folk">
+            </a>
+          </div>
+
+          <div class="cs_main_header_center">
+            <nav class="cs_nav" aria-label="Main navigation">
+              <ul class="cs_nav_list">
+                <li><a href="index.html#hero">Home</a></li>
+                <li class="menu-item-has-children">
+                  <a href="services.html">Services</a>
+                  <ul>
+                    <li><a href="business-support.html">Business Support</a></li>
+                    <li><a href="social-media-services.html">Social Media</a></li>
+                  </ul>
+                </li>
+                <li><a href="strategy-session.html">Strategy Session</a></li>
+                <li><a href="about-us.html">About the Folks</a></li>
+              </ul>
+            </nav>
+          </div>
+
+          <div class="cs_main_header_right">
+            <a class="cs_btn cs_style_1 cs_border_btn" href="#contact-options">
+              <span>Work with us</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Contact hero -->
+    <section>
+      <div class="cs_height_170 cs_height_lg_120"></div>
+
+      <div class="container">
+        <div class="cf_contact_hero">
+          <p class="cf_contact_label">Contact</p>
+          <h1 class="cf_contact_title cs_medium">Let's Connect</h1>
+          <p class="cf_contact_subheading">Choose the Way That Suits You</p>
+          <p class="cf_contact_intro">
+            You do not need to have everything figured out before getting in touch.
+            Book a discovery call if you would like to talk it through, or send an email if you would rather start there.
+          </p>
+        </div>
+      </div>
+
+      <div class="cs_height_100 cs_height_lg_70"></div>
+    </section>
+
+    <!-- Contact options -->
+    <section id="contact-options">
+      <div class="container">
+        <div class="cf_contact_options">
+          <article class="cf_contact_card cf_contact_card_call">
+            <h2>Book a Discovery Call</h2>
+            <p>
+              Choose a time that works for you and tell us what is happening in your business.
+              We'll talk through where things feel stuck and what kind of support may make sense.
+            </p>
+            <div class="cf_contact_card_action">
+              <a class="cf_contact_pill" href="https://zcal.co/creativefolkau/30min" target="_blank" rel="noopener noreferrer">
+                Choose a time
+              </a>
+            </div>
+          </article>
+
+          <article class="cf_contact_card cf_contact_card_email">
+            <h2>Send Us an Email</h2>
+            <p>
+              Prefer to write it down first? Send us a note with a little about your business,
+              what you need help with and any timing you have in mind.
+            </p>
+            <div class="cf_contact_card_action">
+              <a class="cf_contact_pill" href="mailto:hello@creativefolk.com.au?subject=Website%20enquiry">
+                Send an email
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <div class="cs_height_130 cs_height_lg_80"></div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer id="contact" class="cs_footer cs_style_1 cs_focus_bg cs_white_color">
+    <div class="cs_height_85 cs_height_lg_65"></div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-4 col-md-4">
+          <div class="cs_widget_wrap">
+            <h2 class="cs_widget_title cs_white_color cs_font_25 text-uppercase cs_normal">Location</h2>
+            <p class="cs_fooer_text cs_font_18 cs_opacity_07 mb-0">
+              Chiang Mai, Thailand<br>
+              Serving folks across the globe
+            </p>
+          </div>
+        </div>
+
+        <div class="col-xl-4 col-md-4">
+          <div class="cs_widget_wrap">
+            <h2 class="cs_widget_title cs_white_color cs_font_25 text-uppercase cs_normal">Contact us</h2>
+            <ul class="cs_text_list cs_mp_0 cs_opacity_07 mb-0">
+              <li class="cs_font_18">
+                <a href="mailto:hello@creativefolk.com.au?subject=Website%20enquiry">hello@creativefolk.com.au</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-xl-4 col-md-4">
+          <div class="cs_widget_wrap">
+            <h2 class="cs_widget_title cs_white_color cs_font_25 text-uppercase cs_normal">Follow</h2>
+            <div class="cs_social cs_style_1">
+              <a class="cs_center cs_font_18" href="https://www.facebook.com/creativefolkau" target="_blank" rel="noopener noreferrer" aria-label="Creative Folk on Facebook">
+                <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+              </a>
+              <a class="cs_center cs_font_18" href="https://www.linkedin.com/company/creativefolkau" target="_blank" rel="noopener noreferrer" aria-label="Creative Folk on LinkedIn">
+                <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+              </a>
+              <a class="cs_center cs_font_18" href="https://www.instagram.com/creativefolkau" target="_blank" rel="noopener noreferrer" aria-label="Creative Folk on Instagram">
+                <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cs_height_60 cs_height_lg_50"></div>
+  </footer>
+
+  <!-- Shared website scripts -->
+  <script src="assets/js/plugins/jquery-3.6.0.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Creative Folk">
+  <meta name="description" content="The page you were looking for could not be found.">
+
+  <link rel="icon" href="assets/img/hero/BLACK_Logo_BG.svg">
+  <title>Page Not Found | Creative Folk</title>
+
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <style>
+    @font-face {
+      font-family: "Bricolage Grotesque";
+      src: url("assets/fonts/BricolageGrotesque-Regular.woff") format("woff");
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    body {
+      min-height: 100vh;
+      margin: 0;
+      background: #fffafb;
+      color: #1f1f1f;
+    }
+
+    .cf_error_page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .cf_error_header {
+      padding: 26px 0;
+      border-bottom: 1px solid rgba(31, 31, 31, 0.12);
+    }
+
+    .cf_error_logo {
+      display: inline-flex;
+      width: 120px;
+    }
+
+    .cf_error_logo img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .cf_error_main {
+      flex: 1;
+      display: grid;
+      place-items: center;
+      padding: 90px 0;
+    }
+
+    .cf_error_content {
+      width: 100%;
+      max-width: 1050px;
+    }
+
+    .cf_error_code {
+      margin: 0 0 18px;
+      color: #fa7bd4;
+      font-family: "Unbounded", sans-serif;
+      font-size: 18px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+    }
+
+    .cf_error_title {
+      max-width: 900px;
+      margin: 0;
+      color: #5533d8;
+      font-family: "Unbounded", sans-serif;
+      font-size: clamp(48px, 7vw, 100px);
+      font-weight: 500;
+      line-height: 1.03;
+      text-transform: uppercase;
+    }
+
+    .cf_error_text {
+      max-width: 720px;
+      margin: 34px 0 0;
+      color: rgba(31, 31, 31, 0.74);
+      font-family: "Bricolage Grotesque", sans-serif;
+      font-size: clamp(20px, 2vw, 25px);
+      line-height: 1.5;
+    }
+
+    .cf_error_actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 38px;
+    }
+
+    .cf_error_actions .cs_btn {
+      min-width: 190px;
+      justify-content: center;
+    }
+
+    .cf_error_footer {
+      padding: 26px 0;
+      background: #5533d8;
+      color: #ffffff;
+    }
+
+    .cf_error_footer p {
+      margin: 0;
+      font-family: "Bricolage Grotesque", sans-serif;
+      font-size: 17px;
+    }
+
+    .cf_error_footer a {
+      color: #ffffff;
+    }
+
+    .cf_error_footer a:hover {
+      color: #fa7bd4;
+    }
+
+    @media (max-width: 575px) {
+      .cf_error_header {
+        padding: 20px 0;
+      }
+
+      .cf_error_logo {
+        width: 95px;
+      }
+
+      .cf_error_main {
+        padding: 70px 0;
+      }
+
+      .cf_error_title {
+        font-size: 44px;
+      }
+
+      .cf_error_actions {
+        display: grid;
+      }
+
+      .cf_error_actions .cs_btn {
+        width: 100%;
+        min-width: 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="cf_error_page">
+    <header class="cf_error_header">
+      <div class="container">
+        <a class="cf_error_logo" href="index.html" aria-label="Creative Folk home">
+          <img src="assets/img/hero/BLACK_Logo_BG.svg" alt="Creative Folk">
+        </a>
+      </div>
+    </header>
+
+    <main class="cf_error_main">
+      <div class="container">
+        <div class="cf_error_content">
+          <p class="cf_error_code">404</p>
+          <h1 class="cf_error_title">This Page Has Wandered Off</h1>
+          <p class="cf_error_text">
+            The page may have moved, changed its name or no longer exist. Choose where you would like to go next.
+          </p>
+
+          <div class="cf_error_actions">
+            <a class="cs_btn cs_style_1 cs_focus_2" href="index.html">
+              <span>Back to Home</span>
+            </a>
+            <a class="cs_btn cs_style_1 cs_border_btn" href="services.html">
+              <span>Explore Services</span>
+            </a>
+            <a class="cs_btn cs_style_1 cs_border_btn" href="contact.html">
+              <span>Contact Creative Folk</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="cf_error_footer">
+      <div class="container">
+        <p>
+          Need help? <a href="mailto:hello@creativefolk.com.au?subject=Website%20enquiry">hello@creativefolk.com.au</a>
+        </p>
+      </div>
+    </footer>
+  </div>
+</body>
+
+</html>

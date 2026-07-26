@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Page information -->
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Creative Folk">
+  <meta name="description" content="Explore Creative Folk strategy sessions, practical business support, one-off social media projects and monthly social media services.">
+
+  <!-- Favicon -->
+  <link rel="icon" href="assets/img/hero/BLACK_Logo_BG.svg">
+  <title>Services | Creative Folk</title>
+
+  <!-- Shared website styles -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <style>
+    /* ============================================================
+       HERO
+    ============================================================= */
+    .cf_services_hero {
+      width: 100%;
+      max-width: 1400px;
+    }
+
+    .cf_services_label {
+      display: inline-flex;
+      align-items: center;
+      min-height: 42px;
+      padding: 8px 18px;
+      margin-bottom: 24px;
+      border: 2px solid #5533d8;
+      border-radius: 50px;
+      color: #5533d8;
+      font-size: 16px;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      line-height: 1;
+      text-transform: uppercase;
+    }
+
+    .cf_services_title {
+      margin: 0;
+      color: #5533d8;
+      font-size: clamp(58px, 7vw, 104px);
+      line-height: 0.95;
+      text-transform: uppercase;
+    }
+
+    .cf_services_subheading {
+      margin: 18px 0 0;
+      color: #5533d8;
+      font-size: clamp(28px, 3vw, 42px);
+      font-weight: 500;
+      line-height: 1.1;
+      text-transform: uppercase;
+    }
+
+    .cf_services_intro {
+      width: 100%;
+      max-width: 1200px;
+      margin: 44px 0 0;
+      font-size: 19px !important;
+    }
+
+    /* ============================================================
+       SERVICE OVERVIEW CARDS
+    ============================================================= */
+    .cf_service_page_grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px;
+    }
+
+    .cf_service_page_card {
+      min-height: 320px;
+      border-radius: 28px;
+      background: #68C6F1;
+      padding: 34px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .cf_service_page_card.cs_pink_card {
+      background: #FA7BD4;
+    }
+
+    .cf_service_page_card.cs_lavender_card {
+      background: #BF99FF;
+    }
+
+    .cf_service_page_card h3 {
+      font-size: 26px;
+      line-height: 1.15;
+      text-transform: uppercase;
+      color: #1f1f1f;
+      margin-bottom: 16px;
+    }
+
+    .cf_service_page_card p {
+      font-size: 18px;
+      line-height: 1.45;
+      color: #1f1f1f;
+      margin-bottom: 22px;
+    }
+
+    /* ============================================================
+       SERVICE OVERVIEW CARD BUTTONS
+    ============================================================= */
+    .cf_service_page_card a.cs_btn {
+      align-self: center !important;
+      width: 300px !important;
+      max-width: 100% !important;
+      min-height: 70px !important;
+      padding: 0 28px !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      box-sizing: border-box !important;
+      margin-top: 30px !important;
+    }
+
+    .cf_service_page_card a.cs_btn span {
+      white-space: normal !important;
+      text-align: center !important;
+      font-size: 16px !important;
+      line-height: 1.2 !important;
+    }
+
+    /* ============================================================
+       RESPONSIVE
+    ============================================================= */
+    @media (max-width: 991px) {
+      .cf_service_page_grid {
+        grid-template-columns: 1fr;
+      }
+
+      .cf_service_page_card {
+        min-height: 280px;
+      }
+    }
+
+    @media (max-width: 575px) {
+      .cf_services_label {
+        min-height: 38px;
+        margin-bottom: 20px;
+        font-size: 14px;
+      }
+
+      .cf_services_title {
+        font-size: 48px;
+      }
+
+      .cf_services_subheading {
+        margin-top: 14px;
+        font-size: 26px;
+      }
+
+      .cf_services_intro {
+        margin-top: 34px;
+      }
+
+      .cf_service_page_card {
+        border-radius: 22px;
+        padding: 24px;
+      }
+
+      .cf_service_page_card h3 {
+        font-size: 24px;
+      }
+
+    }
+
+    /* Keep anchored sections clear of the sticky header. */
+    #service-options,
+    #book-strategy-session {
+      scroll-margin-top: 100px;
+    }
+
+    /* Prevent the third-party booking widget from exceeding the viewport. */
+    .zcal-inline-widget {
+      width: 100%;
+      max-width: 100%;
+      overflow: hidden;
+    }
+
+    .cf_booking_spacing {
+      height: 20px;
+    }
+
+    #moving-banner {
+      padding-top: 24px;
+      background: linear-gradient(to bottom, transparent 10px, #5533d8 10px) !important;
+    }
+
+    #moving-banner > .position-relative {
+      top: -13px;
+    }
+
+    #moving-banner .cs_moving_container_wrap {
+      height: 83px !important;
+    }
+
+    #moving-banner .cs_moving_container_wrap:nth-child(2) {
+      height: 87px !important;
+      top: -15px;
+    }
+
+    .cf_moving_banner h3 {
+      font-size: 32px !important;
+      text-transform: uppercase;
+    }
+
+    #moving-banner .cs_sprin_animation {
+      width: 46px;
+      height: 46px;
+    }
+
+    @media (max-width: 767px) {
+      #moving-banner {
+        padding-top: 18px;
+      }
+
+      #moving-banner .cs_moving_container_wrap {
+        height: 73px !important;
+      }
+
+      #moving-banner .cs_moving_container_wrap:nth-child(2) {
+        height: 77px !important;
+      }
+
+      .cf_moving_banner h3 {
+        font-size: 26px !important;
+      }
+
+      #moving-banner .cs_sprin_animation {
+        width: 38px;
+        height: 38px;
+      }
+    }
+
+    /* Respect visitors who prefer less animation. */
+    @media (prefers-reduced-motion: reduce) {
+      .cs_sprin_animation {
+        animation: none !important;
+      }
+
+      html {
+        scroll-behavior: auto !important;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+  <!-- Site header -->
+  <header class="cs_site_header cs_style_1 cs_sticky_header">
+    <div class="cs_main_header">
+      <div class="container">
+        <div class="cs_main_header_in">
+          <div class="cs_main_header_left">
+            <a class="cs_site_branding" href="index.html#hero" aria-label="Creative Folk home">
+              <img src="assets/img/hero/BLACK_Logo_BG.svg" alt="Creative Folk">
+            </a>
+          </div>
+          <div class="cs_main_header_center">
+            <nav class="cs_nav" aria-label="Main navigation">
+              <ul class="cs_nav_list">
+                <li><a href="index.html#hero">Home</a></li>
+                <li class="menu-item-has-children active">
+                  <a href="services.html">Services</a>
+                  <ul>
+                    <li><a href="business-support.html">Business Support</a></li>
+                    <li><a href="social-media-services.html">Social Media</a></li>
+                  </ul>
+                </li>
+                <li><a href="strategy-session.html">Strategy Session</a></li>
+                <li><a href="about-us.html">About the Folks</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="cs_main_header_right">
+            <a href="contact.html" class="cs_btn cs_style_1 cs_border_btn"><span>Work with us</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main>
+    <!-- Hero -->
+    <section id="hero" class="cs_hero cs_style_5 position-relative">
+      <div class="cs_height_170 cs_height_lg_150"></div>
+
+      <div class="container">
+        <div class="cf_services_hero">
+          <p class="cf_services_label">Services</p>
+          <h1 class="cf_services_title cs_medium">Support That Fits</h1>
+          <p class="cf_services_subheading">Where You Are Right Now</p>
+          <p class="cf_services_intro cs_font_18 cs_primary_color cs_opacity_07">
+            For business owners who are good at what they do, but have outgrown keeping it all in their head.
+            Pick the level of support that fits where you are right now.
+          </p>
+        </div>
+      </div>
+
+      <div class="cs_height_10 cs_height_lg_80"></div>
+    </section>
+
+    <!-- Service options -->
+    <section id="service-options">
+      <div class="cs_height_100 cs_height_lg_60"></div>
+
+      <div class="container">
+        <div class="cf_service_page_grid">
+          <div class="cf_service_page_card cs_lavender_card">
+            <div>
+              <h3>You Need an Extra Pair of Hands</h3>
+              <p>
+                You need practical support to make the business easier for you, your team or your clients.<br>
+                We can help with training, operations, team resources and the client experience.
+              </p>
+            </div>
+            <a class="cs_btn cs_style_1 cs_border_btn" href="business-support.html">
+              <span>See business support</span>
+            </a>
+          </div>
+
+          <div class="cf_service_page_card">
+            <div>
+              <h3>Something Feels Off</h3>
+              <p>
+                You know something needs to change, but you can't quite name what.<br>
+                A strategy session gives you a focused look at what's happening, and a clear plan for what to fix first.
+              </p>
+            </div>
+            <a class="cs_btn cs_style_1 cs_border_btn" href="strategy-session.html">
+              <span>Explore strategy sessions</span>
+            </a>
+          </div>
+
+          <div class="cf_service_page_card cs_pink_card">
+            <div>
+              <h3>You Need a Quick Fix</h3>
+              <p>
+                Your social media needs focused attention, but you do not need ongoing monthly support.<br>
+                A one-off project brings the strategy and content together in one go.
+              </p>
+            </div>
+            <a class="cs_btn cs_style_1 cs_border_btn" href="social-media-services.html#one-off-social">
+              <span>See one-off projects</span>
+            </a>
+          </div>
+
+          <div class="cf_service_page_card">
+            <div>
+              <h3>You're Out of Hours</h3>
+              <p>
+                You don't have the time to give this every week, and you shouldn't have to.<br>
+                Our monthly social media packages take the planning and content off your plate.
+              </p>
+            </div>
+            <a class="cs_btn cs_style_1 cs_border_btn" href="social-media-services.html#monthly-social">
+              <span>See monthly packages</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="cs_height_130 cs_height_lg_70"></div>
+    </section>
+
+    <!-- Moving banner -->
+    <section id="moving-banner" class="cf_moving_banner cs_focus_bg cs_white_color">
+      <div class="position-relative">
+        <div class="cs_moving_container_wrap cs_style_1 cs_type_1 cs_focus_bg_2 cs_rotate_3 cs_height_100">
+          <div class="cs_moving_container_in">
+            <div class="cs_moving_content cs_slide_left">
+              <div class="d-flex align-items-center">
+                <img class="cs_sprin_animation cs_sprin_animation_10" src="assets/img/shapes/star_shape_4.svg" alt="">
+                <h3 class="cs_focus_color cs_font_40 cs_medium mb-0">Good Folk. Great Work.</h3>
+              </div>
+              <div class="d-flex align-items-center">
+                <img class="cs_sprin_animation cs_sprin_animation_10" src="assets/img/shapes/star_shape_4.svg" alt="">
+                <h3 class="cs_focus_color cs_font_40 cs_medium mb-0">Good Folk. Great Work.</h3>
+              </div>
+              <div class="d-flex align-items-center">
+                <img class="cs_sprin_animation cs_sprin_animation_10" src="assets/img/shapes/star_shape_4.svg" alt="">
+                <h3 class="cs_focus_color cs_font_40 cs_medium mb-0">Good Folk. Great Work.</h3>
+              </div>
+            </div>
+            <div class="cs_moving_content cs_slide_left" aria-hidden="true">
+              <div class="d-flex align-items-center">
+                <img class="cs_sprin_animation cs_sprin_animation_10" src="assets/img/shapes/star_shape_4.svg" alt="">
+                <h3 class="cs_focus_color cs_font_40 cs_medium mb-0">Good Folk. Great Work.</h3>
+              </div>
+              <div class="d-flex align-items-center">
+                <img class="cs_sprin_animation cs_sprin_animation_10" src="assets/img/shapes/star_shape_4.svg" alt="">
+                <h3 class="cs_focus_color cs_font_40 cs_medium mb-0">Good Folk. Great Work.</h3>
+              </div>
+              <div class="d-flex align-items-center">
+                <img class="cs_sprin_animation cs_sprin_animation_10" src="assets/img/shapes/star_shape_4.svg" alt="">
+                <h3 class="cs_focus_color cs_font_40 cs_medium mb-0">Good Folk. Great Work.</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="cs_moving_container_wrap cs_style_1 cs_type_1 cs_focus_bg_3 cs_rotate_2 cs_height_100">
+          <div class="cs_moving_container_in">
+            <div class="cs_moving_content cs_slide_left">
+              <div class="d-flex align-items-center">
+                <img class="cs_sprin_animation cs_sprin_animation_10" src="assets/img/shapes/star_shape_4.svg" alt="">
+                <h3 class="cs_focus_color cs_font_40 cs_medium mb-0">Good Folk. Great Work.</h3>
+              </div>
+              <div class="d-flex align-items-center">
+                <img class="cs_sprin_animation cs_sprin_animation_10" src="assets/img/shapes/star_shape_4.svg" alt="">
+                <h3 class="cs_focus_color cs_font_40 cs_medium mb-0">Good Folk. Great Work.</h3>
+              </div>
+              <div class="d-flex align-items-center">
+                <img class="cs_sprin_animation cs_sprin_animation_10" src="assets/img/shapes/star_shape_4.svg" alt="">
+                <h3 class="cs_focus_color cs_font_40 cs_medium mb-0">Good Folk. Great Work.</h3>
+              </div>
+            </div>
+            <div class="cs_moving_content cs_slide_left" aria-hidden="true">
+              <div class="d-flex align-items-center">
+                <img class="cs_sprin_animation cs_sprin_animation_10" src="assets/img/shapes/star_shape_4.svg" alt="">
+                <h3 class="cs_focus_color cs_font_40 cs_medium mb-0">Good Folk. Great Work.</h3>
+              </div>
+              <div class="d-flex align-items-center">
+                <img class="cs_sprin_animation cs_sprin_animation_10" src="assets/img/shapes/star_shape_4.svg" alt="">
+                <h3 class="cs_focus_color cs_font_40 cs_medium mb-0">Good Folk. Great Work.</h3>
+              </div>
+              <div class="d-flex align-items-center">
+                <img class="cs_sprin_animation cs_sprin_animation_10" src="assets/img/shapes/star_shape_4.svg" alt="">
+                <h3 class="cs_focus_color cs_font_40 cs_medium mb-0">Good Folk. Great Work.</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="cs_height_59 cs_height_lg_75"></div>
+      </div>
+    </section>
+
+    <div class="cs_height_90 cs_height_lg_70"></div>
+
+    <!-- Final booking call to action -->
+    <section id="book-strategy-session">
+      <div class="container">
+        <div class="cs_cta cs_style_1 text-center cf_booking_cta">
+          <div class="cs_height_130 cs_height_lg_70"></div>
+
+          <div class="cs_cta_info">
+            <h2 class="cs_cta_title cs_normal text-uppercase cs_primary_color cs_font_70">
+              Not Sure Where to Start?
+            </h2>
+
+            <div class="cs_height_40 cs_height_lg_30"></div>
+
+            <h3 class="cs_cta_subtitle cs_medium cs_primary_color cs_font_25">
+              Book a strategy session and we’ll work out what needs attention first.
+            </h3>
+
+            <div class="cf_booking_spacing" aria-hidden="true"></div>
+
+            <script type="text/javascript" async src="https://static.zcal.co/embed/v1/embed.js"></script>
+            <div class="zcal-inline-widget">
+              <a href="https://zcal.co/i/ZJHwr_RS">Strategy Session - Schedule a meeting</a>
+            </div>
+          </div>
+
+          <div class="cs_height_150 cs_height_lg_80"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer id="contact" class="cs_footer cs_style_1 cs_focus_bg cs_white_color">
+    <div class="cs_height_85 cs_height_lg_65"></div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-4 col-md-4">
+          <div class="cs_widget_wrap">
+            <h2 class="cs_widget_title cs_white_color cs_font_25 text-uppercase cs_normal">Location</h2>
+            <p class="cs_fooer_text cs_font_18 cs_opacity_07 mb-0">
+              Chiang Mai, Thailand<br>
+              Serving folks across the globe
+            </p>
+          </div>
+        </div>
+
+        <div class="col-xl-4 col-md-4">
+          <div class="cs_widget_wrap">
+            <h2 class="cs_widget_title cs_white_color cs_font_25 text-uppercase cs_normal">Contact us</h2>
+            <ul class="cs_text_list cs_mp_0 cs_opacity_07 mb-0">
+              <li class="cs_font_18">
+                <a href="mailto:hello@creativefolk.com.au?subject=Website%20enquiry">hello@creativefolk.com.au</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-xl-4 col-md-4">
+          <div class="cs_widget_wrap">
+            <h2 class="cs_widget_title cs_white_color cs_font_25 text-uppercase cs_normal">Follow</h2>
+            <div class="cs_social cs_style_1">
+              <a class="cs_center cs_font_18" href="https://www.facebook.com/creativefolkau" target="_blank" rel="noopener noreferrer" aria-label="Creative Folk on Facebook">
+                <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+              </a>
+              <a class="cs_center cs_font_18" href="https://www.linkedin.com/company/creativefolkau" target="_blank" rel="noopener noreferrer" aria-label="Creative Folk on LinkedIn">
+                <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+              </a>
+              <a class="cs_center cs_font_18" href="https://www.instagram.com/creativefolkau" target="_blank" rel="noopener noreferrer" aria-label="Creative Folk on Instagram">
+                <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cs_height_60 cs_height_lg_50"></div>
+  </footer>
+
+  <!-- Shared website scripts -->
+  <script src="assets/js/plugins/jquery-3.6.0.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>
