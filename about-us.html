@@ -196,9 +196,19 @@
     margin-bottom: 60px !important;
   }
 
-  #about-banner .cs_moving_container_wrap:nth-child(2) {
-    position: relative;
-    top: 8px;
+  @media (min-width: 992px) {
+    #about-banner {
+      position: relative;
+      top: 4px;
+    }
+
+    #about-banner .cs_moving_container_wrap:nth-child(1) {
+      top: 16px;
+    }
+
+    #about-banner .cs_moving_container_wrap:nth-child(2) {
+      top: 24px;
+    }
   }
 
   @media (max-width: 767px) {
