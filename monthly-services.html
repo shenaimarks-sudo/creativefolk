@@ -290,12 +290,19 @@
 
       .cf_package_nav {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
       }
 
       .cf_package_nav .cs_btn {
         width: 100%;
         max-width: 300px;
+        text-align: center;
+      }
+
+      .cf_package_layout,
+      .cf_package_layout > * {
+        width: 100%;
+        min-width: 0;
       }
     }
 
@@ -327,12 +334,24 @@
       }
 
       .cf_package_title {
-        font-size: 44px;
+        max-width: 100%;
+        font-size: clamp(32px, 9vw, 40px);
+        overflow-wrap: anywhere;
       }
 
       .cf_package_details {
+        width: 100%;
+        max-width: 100%;
         padding: 26px;
         border-radius: 22px;
+        box-sizing: border-box;
+        overflow: hidden;
+      }
+
+      .cf_package_details h3,
+      .cf_package_details li {
+        max-width: 100%;
+        overflow-wrap: anywhere;
       }
 
       .cf_package_price {
@@ -343,6 +362,7 @@
 
       .cf_package_action.cs_btn {
         width: 100%;
+        max-width: 100%;
         padding-right: 18px;
         padding-left: 18px;
         font-size: 15px;
